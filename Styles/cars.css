@@ -1,0 +1,24 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body::after {
+    background-image: url('../Photos/bmw_cars-background.jpg');
+    background-size: cover;
+    background-position-x: 0;
+    background-position-y: -150px;
+    background-repeat: no-repeat;
+    opacity: 100%;
+}
+
+body::before {
+    background-image: url('../Photos/bmw_cars-background.jpg');
+    background-size: cover;
+    background-position-x: 0;
+    background-position-y: -150px;
+    background-repeat: no-repeat;
+    opacity: 0%;
+}
+
+
