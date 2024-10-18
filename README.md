@@ -2,23 +2,27 @@
 
 ## Unser Team
 
-### Arda - Hauptentwickler & Design Lead
+### Arda Dönmez - Hauptentwickler & Design Lead
 - Verantwortlich für Design und Entwicklung der Hauptseite
 - Umfangreiche Erfahrung in Webentwicklung  
 - Leitet die technische Umsetzung des Projekts
 
-### Rron - Team & Kommunikation
+### Rron Gashi - Team & Kommunikation
 - Gestaltet die "Über uns"-Seite
 - Erstellt Teamprofile mit Fotos und Beschreibungen
-- Verantwortlich für die Präsentation unseres Teams nach außen
 
-### Kerim - Produkt & Pricing
+### Kerim Yagci - Produkt & Pricing
 - Entwickelt den Fahrzeugkatalog
 - Pflegt Preise und Produktdetails
 - Erstellt attraktive Produktbeschreibungen der BMW-Modelle
 
-### Daryan - Dokumentation & Konzept 
+### Daryan Mamsaleh - Dokumentation & Konzept 
 - Verantwortlich für die Projektdokumentation
-- Entwickelt und pflegt das Markdown-Repository
+- dafür verantwortlich, BMW zu beschreiben
 - Definiert die Projektziele und -struktur
+
+## Unser Ziel
+- Umfangreiche beschreibung der BMW Marke
+- Eine gut gestylte Website mit kreativen Interface
+
 
