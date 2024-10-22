@@ -6,7 +6,7 @@ html, body {
 }
 
 body {
-    background-image: url('../Photos/bmw_cars-background.jpg');
+    background-image: url('../Photos/bmw_cars-background.png');
     background-size: cover;
     background-position-y: 95px;
     background-repeat: no-repeat;
