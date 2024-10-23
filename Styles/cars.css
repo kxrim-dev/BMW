@@ -3,35 +3,21 @@ html, body {
     padding: 0;
     height: 100%;
     font-family: 'Arial', sans-serif;
-}
-
-body {
-    background-image: url('../Photos/bmw_cars-background.png');
-    background-size: cover;
-    background-position-y: 95px;
-    background-repeat: no-repeat;
+    background-color: #f4f4f4;
 }
 
 header {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #000;
     padding: 20px;
+    color: white;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-h1 {
-    color: #ffffff;
-    font-size: 3rem;
-    margin: 0;
 }
 
 .logo {
     position: absolute;
-    top: 10px;
-    left: 20px;
+    top: 30px;
+    left: 30px;
     width: 70px;
     height: 70px;
     animation: rotate 5s infinite linear;
@@ -46,24 +32,44 @@ h1 {
     }
 }
 
+h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.header-nav a {
+    margin: 0 15px;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.header-nav a:hover {
+    color: yellow;
+}
+
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
     padding: 40px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .grid-item {
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     transition: transform 0.3s ease-in-out;
-}
-
-a {
-    text-decoration: none;
 }
 
 .grid-item:hover {
@@ -88,24 +94,33 @@ a {
     color: #555;
 }
 
-.button-container {
-    text-align: center;
-    margin-top: 40px;
+header .header-left {
+    position: relative;
+    left: -4%;
+    font-size: 25px;
+    color: #ffffff;
 }
 
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #FFD700;
-    color: #000;
+header .header-right {
+    position: relative;
+    color: #ffffff;
+    left: 4%;
+    font-size: 25px;
+}
+
+header .header-left a,
+header .header-right a,
+header h1 a {
+    color: #ffffff;
     text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: background-color 0.3s ease-in-out, padding 0.3s ease-out;
 }
 
-.btn:hover {
-    background-color: #FFC200;
-    padding: 20px 35px;
+header .header-left a:hover,
+header .header-right a:hover,
+header h1 a:hover {
+    color: yellow;
+}
+
+.grid-item a {
+    text-decoration: none;
 }

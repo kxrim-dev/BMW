@@ -26,3 +26,6 @@
 - Eine gut gestylte Website mit kreativen Interface
 
 https://github.com/ToDeleteTestClassroom/test-group-assignment-bmwcrew
+
+##
+# BEI COPYRIGHT GRÜNDEN BITTE KONTAKTIEREN!
