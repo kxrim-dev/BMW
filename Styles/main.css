@@ -5,22 +5,98 @@
 }
 
 .main {
-    background-image: url(../Photos/bmwM52024_jpg.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%; 
-    justify-content: center;
-    align-items: center;
-    filter: brightness(80%);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    position: relative;
 }
 
-.text h1{
+.img { 
+    height: 100vh;
+    width: 100%; 
+    filter: brightness(50%);
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    height: 10vh;
+    width: 5%;
+    z-index: 1;
+    
+}
+.text {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.text h1 {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.text-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text p {
     filter: brightness(100%);
     color: white;
-    font-size: 2.8em;
-    text-align: center;
-    padding-top: 28%;
+    font-size: 1.2em;
+    margin-right: 20px;
 }
+
+.text button {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    color: rgb(0, 0, 0); 
+    border: 1px solid white;  
+    border-radius: 50%;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.text button:after {
+    content: '➔';
+    font-size: 1em;
+    color: white;
+}
+
+.main nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    padding-left: 200px;
+    z-index: 1;
+}
+
+.main nav li {
+    list-style: none;
+    margin-right: 40px;
+    font-size: 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.main nav li a {
+    text-decoration: none;
+    color: white;
+}
+
