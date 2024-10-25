@@ -20,20 +20,20 @@ h1 {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-.box {
+.boxHistory {
   position: absolute;
   top: 125px;
-  left: 85px; 
+  left: 85px;
   width: 90%; 
-  height: 200px; 
-  background-color: rgba(255, 255, 255, 0.8); 
-  border: 1px solid #000; 
-  border-radius: 10px; 
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #000;
+  border-radius: 10px;
   padding: 20px;
   text-align: center;
 }
 
-.box h1
+.boxHistory h1
 {
   font-size: 35px;
   position: relative;
@@ -45,11 +45,26 @@ h1 {
 
 }
 
-.box p
-{
-  position: relative;
-  left: 50px;
+.boxBrands {
+  position: absolute;
+  top: 400px;
+  left: 85px;
+  width: 15%; 
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
 }
+
+.boxBrands img{
+  width: 100%;
+  position: relative;
+  align-items: center;
+}
+
+
 
 
 
