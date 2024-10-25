@@ -1,31 +1,65 @@
-# BMW Webprojekt
+  # BMW Webprojekt
 
-## Unser Team
+## Projektbeschreibung
+
+Das BMW-Webprojekt zielt darauf ab, eine elegante, benutzerfreundliche und informative Website zu erstellen, die den Luxus und das Wesen der Marke BMW widerspiegelt. Unser Ziel ist es, eine stilvolle Website mit einem kreativen und nahtlosen Interface zu entwickeln, die die Benutzererfahrung verbessert und umfassende Informationen über BMW-Fahrzeuge, Preise und die Geschichte der Marke bereitstellt.
+
+---
+
+## Team
 
 ### Arda Dönmez - Hauptentwickler & Design Lead
-- Verantwortlich für Design und Entwicklung der Hauptseite
-- Umfangreiche Erfahrung in Webentwicklung  
-- Leitet die technische Umsetzung des Projekts
 
-### Rron Gashi - Team & Kommunikation
-- Gestaltet die "Über uns"-Seite
-- Erstellt Teamprofile mit Fotos und Beschreibungen
+- **Rolle**: Verantwortlich für das Design und die Entwicklung der Hauptseite.
+- **Aufgaben**:
+  - Leitet die technische Umsetzung und Designstrategie.
+  - Sorgt dafür, dass das Layout den Markenästhetiken von BMW entspricht.
+- **Erfahrung**: Umfangreiche Erfahrung in Webentwicklung und Design.
 
-### Kerim Yagci - Produkt & Pricing
-- Entwickelt den Fahrzeugkatalog
-- Pflegt Preise und Produktdetails
-- Erstellt attraktive Produktbeschreibungen der BMW-Modelle
+### Rron Gashi - Team- & Kommunikationsleitung
 
-### Daryan Mamsaleh - Dokumentation & Konzept 
-- Verantwortlich für die Projektdokumentation
-- dafür verantwortlich, BMW zu beschreiben
-- Definiert die Projektziele und -struktur
+- **Rolle**: Gestaltet die "Über uns"-Seite.
+- **Aufgaben**:
+  - Erstellen von Teamprofilen mit Fotos und Beschreibungen.
+  - Verwaltung der Kommunikation innerhalb des Teams und Dokumentation der Projektfortschritte.
 
-## Unser Ziel
-- Umfangreiche beschreibung der BMW Marke
-- Eine gut gestylte Website mit kreativen Interface
+### Kerim Yagci - Produkt- & Preisspezialist
 
-https://github.com/ToDeleteTestClassroom/test-group-assignment-bmwcrew
+- **Rolle**: Entwickelt und pflegt den Fahrzeugkatalog.
+- **Aufgaben**:
+  - Aktualisiert Produktdetails und Preisinformationen.
+  - Erarbeitet ansprechende Beschreibungen für BMW-Modelle, um das Interesse der Benutzer zu wecken.
 
-##
-# BEI COPYRIGHT GRÜNDEN BITTE KONTAKTIEREN!
+### Daryan Mamsaleh - Dokumentations- & Konzeptleitung
+
+- **Rolle**: Verantwortlich für die Projektdokumentation und das konzeptionelle Design.
+- **Aufgaben**:
+  - Verfasst umfassende Beschreibungen der Marke BMW.
+  - Definiert die Projektziele, -vorgaben und strukturellen Richtlinien zur Einhaltung der Markenstandards.
+
+---
+
+## Projektziele
+
+1. **Umfassende Beschreibung der Marke BMW**  
+   Bereitstellung detaillierter Einblicke in das Erbe, die Werte und das Engagement von BMW für automobile Exzellenz.
+
+2. **Stilvolles und intuitives Webdesign**  
+   Entwicklung eines modernen, optisch ansprechenden Interfaces, das die Eleganz von BMW vermittelt und eine einfache Navigation gewährleistet.
+
+3. **Benutzerengagement durch kreatives Interface**  
+   Gestaltung einer interaktiven Plattform, die Benutzer dazu anregt, BMW-Modelle und Produktdetails in einer optisch ansprechenden Weise zu erkunden.
+
+---
+
+## Features
+
+- **Hauptseite**: Elegant gestaltete Startseite, die die Benutzer willkommen heißt.
+- **Über-uns-Seite**: Einblick in das Team mit Profilen und Rollen.
+- **Fahrzeugkatalog**: Eine umfassende und aktuelle Sammlung der BMW-Modelle mit Preisen und Produktspezifikationen.
+- **Projektdokumentation**: Klare und detaillierte Dokumentation, die Benutzer durch die Geschichte und Projektziele der Marke führt.
+
+Dieses Projekt soll den Ruf von BMW für Luxus und Innovation widerspiegeln und eine ansprechende Benutzererfahrung bieten.
+
+#
+## BEI COPYRIGHT GRÜNDEN BITTE KONTAKTIEREN
