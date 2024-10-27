@@ -31,6 +31,8 @@ h1 {
   border-radius: 10px;
   padding: 20px;
   text-align: center;
+  transform: scale(1);
+  transition: transform 0.2s ease-out;
 }
 
 .boxHistory h1
@@ -45,23 +47,108 @@ h1 {
 
 }
 
-.boxBrands {
+.boxMotorrad {
   position: absolute;
   top: 400px;
   left: 85px;
-  width: 15%; 
+  width: 20%; 
   height: 400px;
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid #000;
   border-radius: 10px;
   padding: 20px;
   text-align: center;
+  transform: scale(1);
+  transition: transform 0.2s ease-out;
 }
 
-.boxBrands img{
-  width: 100%;
+.boxMotorrad img{
+  width: 70%;
   position: relative;
   align-items: center;
+}
+
+.boxBMW {
+  position: absolute;
+  top: 400px;
+  left: 560px;
+  width: 20%; 
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transform: scale(1);
+  transition: transform 0.2s ease-out;
+}
+
+.boxBMW img{
+  width: 70%;
+  position: relative;
+  align-items: center;
+}
+
+.boxRollsRoyce {
+  position: absolute;
+  top: 400px;
+  left: 1035px;
+  width: 20%; 
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transform: scale(1);
+  transition: transform 0.2s ease-out;
+}
+
+.boxRollsRoyce img{
+  width: 70%;
+  position: relative;
+  align-items: center;
+}
+
+.boxMINI {
+  position: absolute;
+  top: 400px;
+  left: 1510px;
+  width: 20%; 
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transform: scale(1);
+  transition: transform 0.2s ease-out;
+}
+
+.boxMINI img{
+  width: 70%;
+  position: relative;
+  align-items: center;
+}
+
+.boxBMW:hover {
+  transform: scale(1.05);
+}
+
+.boxMotorrad:hover {
+  transform: scale(1.05);
+}
+
+.boxHistory:hover{
+  transform: scale(1.05)
+}
+
+.boxRollsRoyce:hover{
+  transform: scale(1.05);
+}
+
+.boxMINI:hover{
+  transform: scale(1.05);
 }
 
 
