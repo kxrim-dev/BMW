@@ -41,9 +41,9 @@ Das BMW-Webprojekt hat das Ziel, eine elegante und benutzerfreundliche Website z
 
 1. **Umfassende Beschreibung der Marke BMW**  
 
-2. **Stilvolles und intuitives Webdesign**  
+2. **Stilvolles Webdesign**  
 
-3. **Benutzerengagement durch kreatives Interface**
+3. **kreatives Interface**
    
 ---
 
