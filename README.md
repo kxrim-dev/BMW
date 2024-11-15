@@ -32,24 +32,20 @@ Das BMW-Webprojekt zielt darauf ab, eine elegante, benutzerfreundliche und infor
 
 ### Daryan Mamsaleh - Dokumentations- & Konzeptleitung
 
-- **Rolle**: Verantwortlich für die Projektdokumentation und das konzeptionelle Design.
+- **Rolle**: Verantwortlich für die Projektdokumentation und das beschreiben der BMW Marke.
 - **Aufgaben**:
   - Verfasst umfassende Beschreibungen der Marke BMW.
-  - Definiert die Projektziele, -vorgaben und strukturellen Richtlinien zur Einhaltung der Markenstandards.
-
+  - Definiert die Projektziele.
 ---
 
 ## Projektziele
 
 1. **Umfassende Beschreibung der Marke BMW**  
-   Bereitstellung detaillierter Einblicke in das Erbe, die Werte und das Engagement von BMW für automobile Exzellenz.
 
 2. **Stilvolles und intuitives Webdesign**  
-   Entwicklung eines modernen, optisch ansprechenden Interfaces, das die Eleganz von BMW vermittelt und eine einfache Navigation gewährleistet.
 
-3. **Benutzerengagement durch kreatives Interface**  
-   Gestaltung einer interaktiven Plattform, die Benutzer dazu anregt, BMW-Modelle und Produktdetails in einer optisch ansprechenden Weise zu erkunden.
-
+3. **Benutzerengagement durch kreatives Interface**
+   
 ---
 
 ## Features
