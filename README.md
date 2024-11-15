@@ -2,8 +2,7 @@
 
 ## Projektbeschreibung
 
-Das BMW-Webprojekt zielt darauf ab, eine elegante, benutzerfreundliche und informative Website zu erstellen, die den Luxus und das Wesen der Marke BMW widerspiegelt. Unser Ziel ist es, eine stilvolle Website mit einem kreativen und nahtlosen Interface zu entwickeln, die die Benutzererfahrung verbessert und umfassende Informationen über BMW-Fahrzeuge, Preise und die Geschichte der Marke bereitstellt.
-
+Das BMW-Webprojekt hat das Ziel, eine elegante und benutzerfreundliche Website zu gestalten, die den Luxus und die Identität der Marke BMW widerspiegelt. Die Website soll ein kreatives und intuitives Interface bieten, die Nutzererfahrung verbessern und umfassende Informationen zu BMW-Fahrzeugen, Preisen und der Markengeschichte bereitstellen.
 ---
 
 ## Team
@@ -53,7 +52,7 @@ Das BMW-Webprojekt zielt darauf ab, eine elegante, benutzerfreundliche und infor
 - **Hauptseite**: Elegant gestaltete Startseite, die die Benutzer willkommen heißt.
 - **Über-uns-Seite**: Einblick in das Team mit Profilen und Rollen.
 - **Fahrzeugkatalog**: Eine umfassende und aktuelle Sammlung der BMW-Modelle mit Preisen und Produktspezifikationen.
-- **Projektdokumentation**: Klare und detaillierte Dokumentation, die Benutzer durch die Geschichte und Projektziele der Marke führt.
+- **BMW-Marke**: Eine klare und detaillierte Darstellung der Geschichte und der zentralen Informationen zur Marke BMW.
 
 Dieses Projekt soll den Ruf von BMW für Luxus und Innovation widerspiegeln und eine ansprechende Benutzererfahrung bieten.
 
