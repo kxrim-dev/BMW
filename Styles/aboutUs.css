@@ -1,4 +1,8 @@
 /* Rechteck erstellen */
+.main {
+    position: relative;
+}
+
 .rectangle {
     height: 150px; /* Höhe des Rechtecks */ 
     padding: 20px; /* Innenabstand */
@@ -16,14 +20,39 @@
 div img
 {
     position: absolute;   /* Bild absolut positionieren */
-    top: 5px;            /* Abstand vom oberen Rand */
+    top: 10px;            /* Abstand vom oberen Rand */
     right: 10px;          /* Abstand vom rechten Rand */
-    width: 140px;         /* Breite des Bildes */
-    height: 140px;        /* Höhe des Bildes */
+    width: 130px;         /* Breite des Bildes */
+    height: 130px;        /* Höhe des Bildes */
     object-fit: cover;    /* Bild wird zugeschnitten, um die Box auszufüllen */
     border-radius: 10px;  /* Runde Ecken für das Bild */
 }
 h1
 {
     text-align: center;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 86%;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    padding-left: 200px;
+    background-color: black;
+}
+
+nav li {
+    list-style: none;
+    margin-right: 40px;
+    font-size: 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
 }
