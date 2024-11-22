@@ -3,13 +3,15 @@ html, body {
     padding: 0;
     height: 100%;
     font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
 }
 
-body {
-    background-image: url('../Photos/bmw_cars-background.png');
-    background-size: cover;
-    background-position-y: 95px;
-    background-repeat: no-repeat;
+header {
+    text-align: center;
+    background-color: #000;
+    padding: 20px;
+    color: white;
+    position: relative;
 }
 
 .logo {
@@ -30,12 +32,9 @@ body {
     }
 }
 
-header {
-    text-align: center;
-    background-color: #000;
-    padding: 20px;
-    color: white;
-    position: relative;
+h1 {
+    font-size: 3rem;
+    margin: 0;
 }
 
 .header-nav {
@@ -55,26 +54,17 @@ header {
     color: yellow;
 }
 
-h1 {
-    color: #ffffff;
-    font-size: 3rem;
-    margin: 0;
-}
-
-.logo {
-    width: 70px;
-    height: 70px;
-}
-
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
     padding: 40px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .grid-item {
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -82,30 +72,60 @@ h1 {
     transition: transform 0.3s ease-in-out;
 }
 
-.grid-item:hover,
-.special-engine-img:hover {
+.grid-item:hover {
     transform: scale(1.05);
 }
 
-.engine-img, .special-engine-img {
+.grid-item img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
 }
 
-.special-engine {
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 40px;
-    text-align: center;
+.grid-item h2 {
+    font-size: 1.8rem;
+    color: #333;
 }
 
-.special-engine-img {
+.grid-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+header .header-left {
     position: relative;
-    left: -1%;
-    width: 500px;
-    transition: transform 0.3s ease-in-out;
+    left: -4%;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+header .header-right {
+    position: relative;
+    color: #ffffff;
+    left: 4%;
+    font-size: 25px;
+}
+
+header .header-left a,
+header .header-right a,
+header h1 a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+header .header-left a:hover,
+header .header-right a:hover,
+header h1 a:hover {
+    color: yellow;
+}
+
+.grid-item a {
+    text-decoration: none;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
 }

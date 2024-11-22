@@ -3,15 +3,13 @@ html, body {
     padding: 0;
     height: 100%;
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
 }
 
-header {
-    text-align: center;
-    background-color: #000;
-    padding: 20px;
-    color: white;
-    position: relative;
+body {
+    background-image: url('../Photos/bmw_cars-background.png');
+    background-size: cover;
+    background-position-y: 95px;
+    background-repeat: no-repeat;
 }
 
 .logo {
@@ -32,9 +30,12 @@ header {
     }
 }
 
-h1 {
-    font-size: 3rem;
-    margin: 0;
+header {
+    text-align: center;
+    background-color: #000;
+    padding: 20px;
+    color: white;
+    position: relative;
 }
 
 .header-nav {
@@ -54,17 +55,26 @@ h1 {
     color: yellow;
 }
 
+h1 {
+    color: #ffffff;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(5, 1fr); 
     gap: 20px;
     padding: 40px;
-    max-width: 1200px;
-    margin: auto;
 }
 
 .grid-item {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.85);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -72,55 +82,34 @@ h1 {
     transition: transform 0.3s ease-in-out;
 }
 
-.grid-item:hover {
+.grid-item:hover,
+.special-engine-img:hover {
     transform: scale(1.05);
 }
 
-.grid-item img {
+.engine-img, .special-engine-img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
     border-radius: 10px;
     margin-bottom: 15px;
 }
 
-.grid-item h2 {
-    font-size: 1.8rem;
-    color: #333;
-}
-
-.grid-item p {
-    font-size: 1rem;
-    color: #555;
-}
-
-header .header-left {
+.special-engine {
     position: relative;
-    left: -4%;
-    font-size: 25px;
-    color: #ffffff;
+    left: -3%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 97.75%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 40px;
+    text-align: center;
 }
 
-header .header-right {
+.special-engine-img {
     position: relative;
-    color: #ffffff;
-    left: 4%;
-    font-size: 25px;
-}
-
-header .header-left a,
-header .header-right a,
-header h1 a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-header .header-left a:hover,
-header .header-right a:hover,
-header h1 a:hover {
-    color: yellow;
-}
-
-.grid-item a {
-    text-decoration: none;
+    left: -1%;
+    width: 500px;
+    transition: transform 0.3s ease-in-out;
 }

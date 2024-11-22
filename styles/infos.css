@@ -1,0 +1,157 @@
+body {
+  background: url('../Photos/BmwMountainPhoto.jpg') no-repeat center center/cover;
+  background-position-y: 0px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-attachment: fixed;
+}
+
+header {  
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px 0;
+  position: relative;
+}
+
+h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.boxHistory {
+  position: absolute;
+  top: 125px;
+  left: 85px;
+  width: 90%; 
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transform: scale(1);
+  transition: transform 0.2s ease-out;
+}
+
+.boxHistory h1
+{
+  font-size: 35px;
+  position: relative;
+  top: -15px;
+  color: #000;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  font-family:cursive;
+
+}
+
+.boxMotorrad {
+  position: absolute;
+  top: 400px;
+  left: 85px;
+  width: 20%; 
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transform: scale(1);
+  transition: transform 0.2s ease-out;
+}
+
+.boxMotorrad img{
+  width: 70%;
+  position: relative;
+  align-items: center;
+}
+
+.boxBMW {
+  position: absolute;
+  top: 400px;
+  left: 560px;
+  width: 20%; 
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transform: scale(1);
+  transition: transform 0.2s ease-out;
+}
+
+.boxBMW img{
+  width: 70%;
+  position: relative;
+  align-items: center;
+}
+
+.boxRollsRoyce {
+  position: absolute;
+  top: 400px;
+  left: 1035px;
+  width: 20%; 
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transform: scale(1);
+  transition: transform 0.2s ease-out;
+}
+
+.boxRollsRoyce img{
+  width: 70%;
+  position: relative;
+  align-items: center;
+}
+
+.boxMINI {
+  position: absolute;
+  top: 400px;
+  left: 1510px;
+  width: 20%; 
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transform: scale(1);
+  transition: transform 0.2s ease-out;
+}
+
+.boxMINI img{
+  width: 70%;
+  position: relative;
+  align-items: center;
+}
+
+.boxBMW:hover {
+  transform: scale(1.05);
+}
+
+.boxMotorrad:hover {
+  transform: scale(1.05);
+}
+
+.boxHistory:hover{
+  transform: scale(1.05)
+}
+
+.boxRollsRoyce:hover{
+  transform: scale(1.05);
+}
+
+.boxMINI:hover{
+  transform: scale(1.05);
+}
+
+
+
+
+
