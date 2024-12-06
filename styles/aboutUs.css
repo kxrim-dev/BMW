@@ -1,27 +1,31 @@
-/* Rechteck erstellen */
 .main {
     position: relative;
 }
 
 .rectangle {
-    height: 150px; /* Höhe des Rechtecks */ 
-    padding: 20px; /* Innenabstand */
+    height: 150px;
+    padding: 12px; 
     margin-top: 20px;
     box-sizing: border-box;
-    border-radius: 10px; /* Sorgt dafür, dass Padding und Border in die Gesamtgröße einbezogen werden */
+    border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     position: relative;
     text-align: left;
-    display: flex;              /* Flexbox aktivieren */
-    flex-direction: column;     /* Vertikale Anordnung */
+    display: flex;             
+    flex-direction: column;     
     align-items: flex-start;
 }
-div img
+.rectangle:first-of-type {
+    margin-top: 35px;
+}
+.rectangle img
 {
-    position: absolute;   /* Bild absolut positionieren */
+    position: absolute;
+    float: right;         /* Bild absolut positionieren */
     top: 10px;            /* Abstand vom oberen Rand */
     right: 10px;          /* Abstand vom rechten Rand */
+    margin-left: 10px;
     width: 130px;         /* Breite des Bildes */
     height: 130px;        /* Höhe des Bildes */
     object-fit: cover;    /* Bild wird zugeschnitten, um die Box auszufüllen */
@@ -30,6 +34,18 @@ div img
 h1
 {
     text-align: center;
+    margin-top: 120px;
+}
+.rectangle h2
+{
+    position:relative;
+    top: -10px;    
+}
+
+.rectangle p{
+    position:relative;
+    top: -40px;  
+    margin: 0px;
 }
 
 nav {
@@ -55,4 +71,12 @@ nav li {
 nav li a {
     text-decoration: none;
     color: white;
+}
+.logo img{
+    position:relative;
+    height:90px;
+    width:200px;
+    margin-top:-46px;
+    margin-bottom:-38px;
+    margin-left:-210px;
 }
