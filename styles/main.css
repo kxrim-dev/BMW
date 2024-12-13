@@ -4,13 +4,23 @@
     box-sizing: border-box;
 }
 
-.main {
-    position: relative;
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.img { 
-    height: 100vh;
-    width: 100%; 
+
+.main {
+    position: relative;
+    width: 100%;
+    height: calc(110vh - 50px);
+}
+
+.img {
+    height: 110vh;
+    width: 100%;
     filter: brightness(50%);
     position: relative;
 }
@@ -22,8 +32,8 @@
     height: 10vh;
     width: 5%;
     z-index: 1;
-    
 }
+
 .text {
     position: absolute;
     top: 70%;
@@ -58,7 +68,6 @@
     margin-right: 20px;
 }
 
-
 .main nav {
     position: absolute;
     top: 0;
@@ -81,6 +90,7 @@
     font-size: 17px;
     line-height: 1.27em;
     text-transform: uppercase;
+    color: white;
 }
 
 .main nav li a {
@@ -99,20 +109,18 @@ video {
     left: 0;
     width: 100%;
     height: 100%;
- }
+}
 
-.bottomNav
-{
+.bottomNav {
     bottom: 0;
     width: 100%;
     display: flex;
-    padding: 40px;
+    padding: 50px;
     padding-left: 200px;
     z-index: 1;
     background-color: black;
-
 }
- 
+
 .bottomNav nav {
     position: relative;
     width: 100%;
@@ -159,7 +167,6 @@ video {
     box-shadow: 0 0 15px rgb(72, 0, 255);
 }
 
-
 .circle {
     position: relative;
     width: 50px;
@@ -170,26 +177,25 @@ video {
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .icon {
+}
+
+.icon {
     font-size: 24px;
     color: white;
     transition: color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .circle:hover {
+}
+
+.circle:hover {
     transform: scale(1.1);
     box-shadow: 0 0 15px rgba(0, 120, 255, 0.6);
-  }
-  
-  .circle:hover .icon {
+}
+
+.circle:hover .icon {
     color: #ffffff;
     transform: scale(1.2);
-  }
+}
 
-.video-page .text 
-{
+.video-page .text {
     position: absolute;
     top: 170%;
     left: 50%;
@@ -204,7 +210,6 @@ video {
     color: white;
     font-size: 1.2em;
 }
-
 
 .video-page .text h1 {
     color: white;
