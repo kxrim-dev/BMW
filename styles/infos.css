@@ -128,3 +128,22 @@ body {
 .brand-link:hover {
   background: #004d8c;
 }
+
+
+.logo {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+  width: 70px;
+  height: 70px;
+  animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
