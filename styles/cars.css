@@ -3,7 +3,7 @@ html, body {
     padding: 0;
     height: 100%;
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #2c2b2b;
 }
 
 header {
@@ -64,7 +64,7 @@ h1 {
 }
 
 .grid-item {
-    background-color: white;
+    background-color: #565656;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -86,12 +86,12 @@ h1 {
 
 .grid-item h2 {
     font-size: 1.8rem;
-    color: #333;
+    color: #ffffff;
 }
 
 .grid-item p {
     font-size: 1rem;
-    color: #555;
+    color: #bbbbbb;
 }
 
 header .header-left {
