@@ -147,3 +147,42 @@ body {
       transform: rotate(360deg);
   }
 }
+
+.founder-container {
+  height: 300px;
+  padding: 12px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #fff; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.founder-container:first-of-type {
+  margin-top: 35px;
+}
+
+.founder-container:hover {
+  transform: 5px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.founder-container img {
+  position: relative;
+  float: left;
+  margin: 10px; 
+  top: 10px;
+  width: 140px; 
+  height: 140px; 
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #e0e0e0; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
