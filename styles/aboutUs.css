@@ -11,13 +11,13 @@ body {
     display: flex; /* Flexbox aktivieren */
     width: 100vw;
     height: 50vh;
-    gap: 10px; /* Abstand zwischen den Boxen */
+    gap: 5px; /* Abstand zwischen den Boxen */
     justify-content: center; /* Zentriert die Boxen horizontal */
 }
 .rectangle {
     flex: 1;
-    margin: 20px; 
-    padding:5px;
+    margin: 5px; 
+    padding:15px;
     background-color:white;
     color:black;
     overflow:hidden;
@@ -30,7 +30,7 @@ h1
 }
 .rectangle h2{
     margin-top:-8px;
-    margin-bottom:35px;
+    margin-bottom:50px;
 }
 .rectangle p{
     position:relative;
