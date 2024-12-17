@@ -4,29 +4,28 @@
 body {
     font-family: 'Inter', sans-serif;
     color: #FFFF;
-    background-color: #F6F6F6;
+    background-color: #2c2b2b;
     line-height: 1.6;
 }
 .container {
-    display: flex; /* Flexbox aktivieren */
+    display: flex;
     width: 100vw;
     height: 50vh;
-    gap: 5px; /* Abstand zwischen den Boxen */
-    justify-content: center; /* Zentriert die Boxen horizontal */
+    gap: 5px; 
+    justify-content: center; 
 }
 .rectangle {
     flex: 1;
     margin: 5px; 
     padding:15px;
-    background-color:white;
-    color:black;
+    background-color:#565656;
     overflow:hidden;
 }
 h1
 {
     text-align: center;
     margin-top: 120px;
-    color:black;
+    margin-bottom: 6px;
 }
 .rectangle h2{
     margin-top:-8px;
