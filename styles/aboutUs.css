@@ -9,12 +9,13 @@ body {
 }
 .container {
     display: flex; /* Flexbox aktivieren */
+    width: 100vw;
+    height: 50vh;
     gap: 10px; /* Abstand zwischen den Boxen */
     justify-content: center; /* Zentriert die Boxen horizontal */
 }
 .rectangle {
-    width: 500px; 
-    height: 100px;
+    flex: 1;
     margin: 20px; 
     padding:5px;
     background-color:white;
