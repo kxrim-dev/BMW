@@ -1,47 +1,36 @@
 .main {
     position: relative;
 }
-
+body {
+    font-family: 'Inter', sans-serif;
+    color: #FFFF;
+    background-color: #F6F6F6;
+    line-height: 1.6;
+}
+.container {
+    display: flex; /* Flexbox aktivieren */
+    gap: 10px; /* Abstand zwischen den Boxen */
+    justify-content: center; /* Zentriert die Boxen horizontal */
+}
 .rectangle {
-    height: 150px;
-    padding: 12px; 
-    margin-top: 20px;
-    box-sizing: border-box;
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    position: relative;
-    text-align: left;
-    display: flex;             
-    flex-direction: column;     
-    align-items: flex-start;
-}
-.rectangle:first-of-type {
-    margin-top: 35px;
-}
-.rectangle img
-{
-    position: absolute;
-    float: right;         /* Bild absolut positionieren */
-    top: 10px;            /* Abstand vom oberen Rand */
-    right: 10px;          /* Abstand vom rechten Rand */
-    margin-left: 10px;
-    width: 130px;         /* Breite des Bildes */
-    height: 130px;        /* Höhe des Bildes */
-    object-fit: cover;    /* Bild wird zugeschnitten, um die Box auszufüllen */
-    border-radius: 10px;  /* Runde Ecken für das Bild */
+    width: 500px; 
+    height: 100px;
+    margin: 20px; 
+    padding:5px;
+    background-color:white;
+    color:black;
+    overflow:hidden;
 }
 h1
 {
     text-align: center;
     margin-top: 120px;
+    color:black;
 }
-.rectangle h2
-{
-    position:relative;
-    top: -10px;    
+.rectangle h2{
+    margin-top:-8px;
+    margin-bottom:35px;
 }
-
 .rectangle p{
     position:relative;
     top: -40px;  
@@ -52,7 +41,7 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    width: 86%;
+    width:88%;
     display: flex;
     align-items: center;
     padding: 30px;
@@ -74,9 +63,9 @@ nav li a {
 }
 .logo img{
     position:relative;
-    height:90px;
+    height:100px;
     width:200px;
     margin-top:-46px;
-    margin-bottom:-38px;
+    margin-bottom:-44px;
     margin-left:-210px;
 }
