@@ -6,6 +6,7 @@ body {
     color: #FFFF;
     background-color: #2c2b2b;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 .container {
     display: flex;
@@ -19,6 +20,7 @@ body {
     margin: 5px; 
     padding:15px;
     background-color:#565656;
+    color:white;
     overflow:hidden;
 }
 h1
