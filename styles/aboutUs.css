@@ -14,9 +14,9 @@ body {
 .container {
     display: flex;
     width: 100vw;
-    height: 50vh;
-    gap: 5px; 
+    height: 200px;
     justify-content: center; 
+    margin-left:-11px;
 }
 .rectangle {
     flex: 1;
@@ -24,7 +24,6 @@ body {
     padding:15px;
     background-color:#565656;
     color:white;
-    overflow:hidden;
 }
 h1
 {
@@ -41,7 +40,10 @@ h1
     top: -40px;  
     margin: 0px;
 }
-
+.rectangle img{
+    float:left;
+    margin-top:0;
+}
 nav {
     position: absolute;
     top: 0;
