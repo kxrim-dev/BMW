@@ -16,9 +16,10 @@ body {
     width: 100vw;
     height: 200px;
     justify-content: center; 
-    margin-left:-11px;
+    margin-left:0px;
 }
 .rectangle {
+    position: relative;
     flex: 1;
     margin: 5px; 
     padding:15px;
@@ -41,8 +42,15 @@ h1
     margin: 0px;
 }
 .rectangle img{
-    float:left;
-    margin-top:0;
+    float: right;
+    position: absolute; 
+    top: 0px;
+    right: 0px;
+    width: 20%;
+     height: auto;
+     clear: right;
+     max-width:100%;
+     max-height:100%;
 }
 nav {
     position: absolute;
