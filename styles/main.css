@@ -34,21 +34,45 @@ html, body {
     z-index: 1;
 }
 
+.christmasvideo
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 90.8%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transform: scale(1.2);
+    filter: grayscale(100%);
+}
+
 .text {
     position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 7%;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    font-family: "Body-Font", sans-serif;
+    align-items: flex-start;
+    text-align: left;
+    transform: translateY(-50%);
+    z-index: 1;
+
 }
 
 .text h1 {
     color: white;
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 3em;
+    font-family: 'Playfair Display', serif;
+    margin-right: 55%; 
+    margin-bottom: 30px;
+}
+
+.text p {
+    color: white;
+    font-size: 1.2em;
+    margin-right: 56%;
+    font-family: 'Roboto', sans-serif;
 }
 
 .text-content {
@@ -59,13 +83,6 @@ html, body {
 
 .text-content a {
     text-decoration: none;
-}
-
-.text p {
-    filter: brightness(100%);
-    color: white;
-    font-size: 1.2em;
-    margin-right: 20px;
 }
 
 .main nav {
