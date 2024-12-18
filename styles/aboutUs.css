@@ -1,6 +1,9 @@
 .main {
     position: relative;
 }
+header{
+    overflow:hidden;
+}
 body {
     font-family: 'Inter', sans-serif;
     color: #FFFF;
@@ -43,7 +46,7 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    width:88%;
+    width:100%;
     display: flex;
     align-items: center;
     padding: 30px;
