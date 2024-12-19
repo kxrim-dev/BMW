@@ -13,26 +13,26 @@ body {
 }
 .container {
     display: flex;
-    width: 100vw;
-    height: 200px;
-    justify-content: center; 
-    margin-left:0px;
-}
-.imagecontainer{
-    display: flex;
-    width: 100vw;
-    height: 200px;
+    width: 100%;
+    height: 300px;
     justify-content: center; 
     margin-left:0px;
 }
 .rectangle {
     position: relative;
     flex: 1;
-    margin: 5px; 
-    padding:15px;
+    margin: 10px; 
+    padding: 10px;
     background-color:#565656;
     color:white;
-    overflow: hidden;
+    overflow:hidden;
+    word-wrap: break-word;
+}
+.rectanglecontainer{
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+    position: relative;
 }
 h1
 {
@@ -41,23 +41,27 @@ h1
     margin-bottom: 6px;
 }
 .rectangle h2{
-    margin-top:-8px;
-    margin-bottom:50px;
+    margin-top:-5px;
+    margin-bottom:0px;
 }
 .rectangle p{
-    position:relative;
-    top: -40px;  
-    margin: 0px;
+    flex:1;
+    margin-top:-5px;
+    position:relative;  
+    margin-right: 300px;
+    word-wrap: break-word;
 }
 .rectangle img{
     float: right;
     position: absolute; 
     top: 0px;
     right: 0px;
-    width: 10vw;
-     height: auto;
-     clear: right;
-     max-width: 155px;
+    margin-top:-55px;
+    margin-right:-20px;
+    height:300px;
+    width:300px;
+    clear: right;
+    flex-shrink: 0;
 }
 nav {
     position: absolute;
