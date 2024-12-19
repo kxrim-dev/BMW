@@ -115,9 +115,36 @@ html, body {
     color: white;
 }
 
-.main nav li a:hover {
-    text-decoration: underline;
-    color: white;
+.secondTopic {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.secondTopic h1 {
+    position: absolute;
+    left: 7%;
+    z-index: inherit;
+}
+
+.firstBox img {
+    position: relative;
+    height: 450px;
+    top: 80px;
+    left: 7%;
+    z-index: -1;
+}
+
+.firstBox h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: "Body-Font", sans-serif;
+    z-index: 1;
 }
 
 video {
