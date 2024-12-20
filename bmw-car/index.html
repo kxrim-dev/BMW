@@ -1,88 +1,116 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMW Serien Überblick</title>
-    <link rel="stylesheet" href="../styles/cars.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/loadingAnimation.css">
+    <link rel="stylesheet" href="../styles/cars.css">
 </head>
 <body>
-    <header>
-        <div class="startAnimation">
+    <header class="mb-4">
+        <div class="startAnimation mb-3">
             <img src="../photos/bmw_logo.png" alt="BMW Logo">
-        </div> 
+        </div>
         <a href="../index.html">
             <img class="logo" src="../photos/bmw_logo2.png" alt="BMW Logo">
         </a>
-        <nav class="header-nav">
+        <nav class="header-nav my-3">
             <a href="index.html">Serien</a>
             <a href="engines.html">Motoren</a>
             <a href="x-models.html">X Modelle</a>
         </nav>
-        <h1>BMW Serien Überblick</h1>
+        <h1 class="display-5">BMW Serien Überblick</h1>
     </header>
 
     <main>
-        <section class="grid-container">
-            <div class="grid-item">
-                <a href="https://www.bmw.at/de/all-models/1-series.html" target="_blank">
-                    <img src="../photos/1er-bmw.jpg" alt="BMW 1 Series">
-                    <h2>BMW 1er Serie</h2>
-                </a>
-                <p>Die BMW 1er Serie ist ein kompakter Hatchback mit sportlichem Handling und moderner Technologie.</p>
-            </div>  
-            <div class="grid-item">
-                <a href="https://www.bmw.at/de/all-models/2-series.html" target="_blank">
-                    <img src="../photos/2er-bmw.jpg" alt="BMW 2 Series">
-                    <h2>BMW 2er Serie</h2>
-                </a>
-                <p>Die BMW 2er Serie kombiniert kompakte Abmessungen mit dynamischem Fahrerlebnis.</p>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card bg-dark text-white h-100">
+                        <img src="../photos/1er-bmw.jpg" class="card-img-top" alt="BMW 1 Series">
+                        <div class="card-body">
+                            <h5 class="card-title">BMW 1er Serie</h5>
+                            <p class="card-text">Die BMW 1er Serie ist ein kompakter Hatchback mit sportlichem Handling und moderner Technologie.</p>
+                            <a href="https://www.bmw.at/de/all-models/1-series.html" target="_blank" class="btn btn-outline-light btn-sm">Mehr erfahren</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card bg-dark text-white h-100">
+                        <img src="../photos/2er-bmw.jpg" class="card-img-top" alt="BMW 2 Series">
+                        <div class="card-body">
+                            <h5 class="card-title">BMW 2er Serie</h5>
+                            <p class="card-text">Die BMW 2er Serie kombiniert kompakte Abmessungen mit dynamischem Fahrerlebnis.</p>
+                            <a href="https://www.bmw.at/de/all-models/2-series.html" target="_blank" class="btn btn-outline-light btn-sm">Mehr erfahren</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card bg-dark text-white h-100">
+                        <img src="../photos/3er-bmw.jpg" class="card-img-top" alt="BMW 3 Series">
+                        <div class="card-body">
+                            <h5 class="card-title">BMW 3er Serie</h5>
+                            <p class="card-text">Die ikonische BMW 3er Serie bietet eine perfekte Balance aus Leistung, Luxus und Alltagstauglichkeit.</p>
+                            <a href="https://www.bmw.at/de/all-models/3-series.html" target="_blank" class="btn btn-outline-light btn-sm">Mehr erfahren</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card bg-dark text-white h-100">
+                        <img src="../photos/4er-bmw.jpg" class="card-img-top" alt="BMW 4 Series">
+                        <div class="card-body">
+                            <h5 class="card-title">BMW 4er Serie</h5>
+                            <p class="card-text">Sportlicher als die 3er Serie, bietet die BMW 4er Serie starke Motoren und ein schlankes Design.</p>
+                            <a href="https://www.bmw.at/de/all-models/4-series.html" target="_blank" class="btn btn-outline-light btn-sm">Mehr erfahren</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card bg-dark text-white h-100">
+                        <img src="../photos/5er-bmw.jpg" class="card-img-top" alt="BMW 5 Series">
+                        <div class="card-body">
+                            <h5 class="card-title">BMW 5er Serie</h5>
+                            <p class="card-text">Die BMW 5er Serie ist eine luxuriöse Mittelklasselimousine mit fortschrittlicher Technologie und Komfort.</p>
+                            <a href="https://www.bmw.at/de/all-models/5-series.html" target="_blank" class="btn btn-outline-light btn-sm">Mehr erfahren</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card bg-dark text-white h-100">
+                        <img src="../photos/6er-bmw.jpg" class="card-img-top" alt="BMW 6 Series">
+                        <div class="card-body">
+                            <h5 class="card-title">BMW 6er Serie</h5>
+                            <p class="card-text">Die BMW 6er Serie bietet luxuriösen Komfort und kraftvolle Motoren, erhältlich als Coupé und Gran Coupé.</p>
+                            <a href="https://www.bmw.at/de/all-models/6-series.html" target="_blank" class="btn btn-outline-light btn-sm">Mehr erfahren</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card bg-dark text-white h-100">
+                        <img src="../photos/7er-bmw.jpg" class="card-img-top" alt="BMW 7 Series">
+                        <div class="card-body">
+                            <h5 class="card-title">BMW 7er Serie</h5>
+                            <p class="card-text">Die BMW 7er Serie verkörpert Luxus in Perfektion. Mit modernster Technologie und edlen Materialien.</p>
+                            <a href="https://www.bmw.at/de/all-models/7-series.html" target="_blank" class="btn btn-outline-light btn-sm">Mehr erfahren</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card bg-dark text-white h-100">
+                        <img src="../photos/8er-bmw.jpg" class="card-img-top" alt="BMW 8 Series">
+                        <div class="card-body">
+                            <h5 class="card-title">BMW 8er Serie</h5>
+                            <p class="card-text">Die BMW 8er Serie kombiniert Dynamik und luxuriöses Design auf höchstem Niveau.</p>
+                            <a href="https://www.bmw.at/de/all-models/8-series.html" target="_blank" class="btn btn-outline-light btn-sm">Mehr erfahren</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="grid-item">
-                <a href="https://www.bmw.at/de/all-models/3-series.html" target="_blank">
-                    <img src="../photos/3er-bmw.jpg" alt="BMW 3 Series">
-                    <h2>BMW 3er Serie</h2>
-                </a>
-                <p>Die ikonische BMW 3er Serie bietet eine perfekte Balance aus Leistung, Luxus und Alltagstauglichkeit.</p>
-            </div>
-            <div class="grid-item">
-                <a href="https://www.bmw.at/de/all-models/4-series.html" target="_blank">
-                    <img src="../photos/4er-bmw.jpg" alt="BMW 4 Series">
-                    <h2>BMW 4er Serie</h2>
-                </a>
-                <p>Sportlicher als die 3er Serie, bietet die BMW 4er Serie starke Motoren und ein schlankes Design.</p>
-            </div>
-            <div class="grid-item">
-                <a href="https://www.bmw.at/de/all-models/5-series.html" target="_blank">
-                    <img src="../photos/5er-bmw.jpg" alt="BMW 5 Series">
-                    <h2>BMW 5er Serie</h2>
-                </a>
-                <p>Die BMW 5er Serie ist eine luxuriöse Mittelklasselimousine mit fortschrittlicher Technologie und Komfort.</p>
-            </div>
-            <div class="grid-item">
-                <a href="https://www.bmw.at/de/all-models/6-series.html" target="_blank">
-                    <img src="../photos/6er-bmw.jpg" alt="BMW 6 Series">
-                    <h2>BMW 6er Serie</h2>
-                </a>
-                <p>Die BMW 6er Serie bietet luxuriösen Komfort und kraftvolle Motoren, erhältlich als Coupé und Gran Coupé.</p>
-            </div>
-            <div class="grid-item">
-                <a href="https://www.bmw.at/de/all-models/7-series.html" target="_blank">
-                    <img src="../photos/7er-bmw.jpg" alt="BMW 7 Series">
-                    <h2>BMW 7er Serie</h2>
-                </a>
-                <p>Die BMW 7er Serie verkörpert Luxus in Perfektion. Mit modernster Technologie, edlen Materialien und kraftvollen Motoren setzt sie neue Maßstäbe im Bereich der Premium-Limousinen.</p>
-            </div>
-            <div class="grid-item">
-                <a href="https://www.bmw.at/de/all-models/8-series.html" target="_blank">
-                    <img src="../photos/8er-bmw.jpg" alt="BMW 8 Series">
-                    <h2>BMW 8er Serie</h2>
-                </a>
-                <p>Die BMW 8er Serie kombiniert athletische Dynamik mit luxuriösem Design. Als Gran Coupé, Coupé oder Cabrio bietet sie pure Eleganz und maximale Fahrfreude auf höchstem Niveau.</p>
-            </div>            
-        </section>
+        </div>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

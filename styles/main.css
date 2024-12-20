@@ -34,21 +34,45 @@ html, body {
     z-index: 1;
 }
 
+.christmasvideo
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 90.8%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transform: scale(1.2);
+    filter: grayscale(100%);
+}
+
 .text {
     position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 7%;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    font-family: "Body-Font", sans-serif;
+    align-items: flex-start;
+    text-align: left;
+    transform: translateY(-50%);
+    z-index: 1;
+
 }
 
 .text h1 {
     color: white;
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 3em;
+    font-family: 'Playfair Display', serif;
+    margin-right: 55%; 
+    margin-bottom: 30px;
+}
+
+.text p {
+    color: white;
+    font-size: 1.2em;
+    margin-right: 56%;
+    font-family: 'Roboto', sans-serif;
 }
 
 .text-content {
@@ -59,13 +83,6 @@ html, body {
 
 .text-content a {
     text-decoration: none;
-}
-
-.text p {
-    filter: brightness(100%);
-    color: white;
-    font-size: 1.2em;
-    margin-right: 20px;
 }
 
 .main nav {
@@ -98,9 +115,52 @@ html, body {
     color: white;
 }
 
-.main nav li a:hover {
-    text-decoration: underline;
+.secondTopic {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.secondTopic h1 {
+    position: absolute;
+    left: 7%;
+    z-index: inherit;
+}
+
+
+.firstBox img {
+    position: relative;
+    height: 450px;
+    top: 80px;
+    left: 7%;
+}
+
+.boxContent {
+    background: black;
+    height: 300px;
+    margin-top: 80px;
+    margin-right: 513px;
+    margin-left: 106px;
     color: white;
+}
+
+.firstBox .boxContent a {
+    position: relative;
+    top: 60px;
+    left: 40px;
+    border-radius: 0px;
+}
+
+.firstBox .boxContent h1 {
+    position: relative;
+    top: 10px;
+    left: 40px;
+}
+
+.firstBox .boxContent p {
+    position: relative;
+    top: 20px;
+    left: 40px;
 }
 
 video {
@@ -167,54 +227,20 @@ video {
     box-shadow: 0 0 15px rgb(72, 0, 255);
 }
 
-.circle {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    border: 3px solid #0078ff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.icon {
-    font-size: 24px;
+.carousel-inner h1 {
     color: white;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.circle:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(0, 120, 255, 0.6);
-}
-
-.circle:hover .icon {
-    color: #ffffff;
-    transform: scale(1.2);
-}
-
-.video-page .text {
-    position: absolute;
-    top: 170%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
+    font-size: 80px;
     text-align: center;
     font-family: "Body-Font", sans-serif;
+    letter-spacing: 20px;
+    font-style: uppercase;
+    margin-bottom: 320px;
 }
 
-.video-page .text p {
+.carousel-inner a {
+    position: relative;
+    text-decoration: none;
     color: white;
-    font-size: 1.2em;
-}
-
-.video-page .text h1 {
-    color: white;
-    font-size: 50px;
-    text-align: center;
-    letter-spacing: 5px;
-    margin-bottom: 30px;
+    top: -20px;
 }
