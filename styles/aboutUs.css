@@ -113,6 +113,7 @@ nav li a {
     z-index: 1;
     background-color: black;
     padding-top:20px;
+    padding-bottom:0px;
 }
 
 .bottomNav nav {
@@ -120,9 +121,8 @@ nav li a {
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 40px;
-    padding-top:0px;
-    padding-bottom:0px;
+    padding: 0px;
+    padding-bottom:10px;
 }
 
 .bottomNav nav li {
@@ -133,4 +133,15 @@ nav li a {
     text-decoration: none;
     color: white;
     margin-top:0px;
+    font-size:small;
+}
+.bottomNav nav li a{
+    text-decoration: none;
+    color: white;
+    font-size:small;
+}
+.bottomNav nav li a:hover{
+    text-decoration: underline;
+    color: darkblue;
+    font-size:small;
 }
