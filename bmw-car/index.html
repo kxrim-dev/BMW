@@ -9,19 +9,47 @@
     <link rel="stylesheet" href="../styles/cars.css">
 </head>
 <body>
-    <header class="mb-4">
-        <div class="startAnimation mb-3">
-            <img src="../photos/bmw_logo.png" alt="BMW Logo">
-        </div>
-        <a href="../index.html">
-            <img class="logo" src="../photos/bmw_logo2.png" alt="BMW Logo">
-        </a>
-        <nav class="header-nav my-3">
-            <a href="index.html">Serien</a>
-            <a href="engines.html">Motoren</a>
-            <a href="x-models.html">X Modelle</a>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./photos/bmw_logo2.png" alt="BMW Logo" style="height: 50px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="autosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Autos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="autosDropdown">
+                                <li><a class="dropdown-item" href="./bmw-car/index.html">Alle Modelle</a></li>
+                                <li><a class="dropdown-item" href="#">SUVs</a></li>
+                                <li><a class="dropdown-item" href="#">Limousinen</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="infosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Infos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="infosDropdown">
+                                <li><a class="dropdown-item" href="./infos-bmw/index.html">Über BMW</a></li>
+                                <li><a class="dropdown-item" href="#">Nachhaltigkeit</a></li>
+                                <li><a class="dropdown-item" href="#">Innovation</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about-us/index.html">Über uns</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <h1 class="display-5">BMW Serien Überblick</h1>
     </header>
 
     <main>
