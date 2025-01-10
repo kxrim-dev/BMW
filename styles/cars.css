@@ -29,6 +29,12 @@ header {
     }
 }
 
+.container 
+{
+    position: relative;
+    top: -700px;
+}
+
 .header-nav a {
     color: white;
     text-decoration: none;
@@ -74,7 +80,7 @@ header {
 }
 
 .navbar {
-    background-color: rgba(0, 0, 0, 0.6); /* Transparenter schwarzer Hintergrund */
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 15px 50px;
 }
 
@@ -93,12 +99,12 @@ header {
 }
 
 .navbar-nav .nav-link:hover {
-    color: #007bff !important; /* Hover-Farbe (BMW-Blau) */
+    color: #007bff !important;
     transform: scale(1.1);
 }
 
 .navbar-nav .dropdown-menu {
-    background-color: rgba(0, 0, 0, 0.8); /* Transparenter Hintergrund für Dropdown */
+    background-color: rgba(0, 0, 0, 0.8);
     border: none;
 }
 
@@ -107,7 +113,7 @@ header {
 }
 
 .navbar-nav .dropdown-menu .dropdown-item:hover {
-    background-color: #007bff; /* Hover-Farbe für Dropdown-Elemente */
+    background-color: #007bff;
     color: white !important;
 }
 
