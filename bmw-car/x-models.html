@@ -7,24 +7,57 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/loadingAnimation.css">
     <link rel="stylesheet" href="../styles/cars.css">
-    
+    <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body>
-    <header>
-        <div class="startAnimation">
-            <img src="../photos/bmw_logo.png" alt="BMW Logo">
-        </div> 
-        <a href="../index.html">
-            <img class="logo" src="../photos/bmw_logo2.png" alt="BMW Logo">
-        </a>
-        <nav class="header-nav">
-            <a href="index.html">Serien</a>
-            <a href="engines.html">Motoren</a>
-            <a href="x-models.html">X Modelle</a>
-        </nav>
-        <h1>BMW Serien Überblick</h1>
-    </header>
-
+    <div class="startAnimation">
+        <img src="../photos/bmw_logo.png" alt="BMW Logo">
+    </div> 
+    <a href="../index.html">
+        <img class="logo" src="../photos/bmw_logo2.png" alt="BMW Logo">
+    </a>
+    <div class="main">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                    <a class="nav-link" href="./about-us/index.html">Home</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Autos
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="index.html">Serien</a></li>
+                      <li><a class="dropdown-item" href="engines.html">Motoren</a></li>
+                      <li><a class="dropdown-item" href="x-models.html">X Modelle</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="./bmw-car/index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Infos
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="./infos-bmw/history.html">Geschichte</a></li>
+                      <li><a class="dropdown-item" href="./infos-bmw/index.html">Marken</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./about-us/index.html">Über uns</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </div>
     <main class="py-5">
         <div class="container">
             <div class="row g-4">
