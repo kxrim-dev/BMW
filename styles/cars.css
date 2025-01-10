@@ -16,7 +16,7 @@ header {
     height: 70px;
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 75px;
     animation: rotate 5s infinite linear;
 }
 
