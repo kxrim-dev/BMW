@@ -28,6 +28,10 @@ body {
     overflow:hidden;
     word-wrap: break-word;
 }
+.rectangle:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
 .rectanglecontainer{
     display: flex;
     align-items: flex-start;
