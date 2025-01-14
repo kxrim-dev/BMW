@@ -103,6 +103,13 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.col-md-6
+{
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
 .brand-specs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
