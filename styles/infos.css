@@ -183,4 +183,9 @@ body {
 {
   transform: translateY(5px);
 }
-
+.main
+{
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
