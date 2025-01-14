@@ -29,12 +29,6 @@ header {
     }
 }
 
-.container 
-{
-    position: relative;
-    top: -700px;
-}
-
 .header-nav a {
     color: white;
     text-decoration: none;
@@ -116,7 +110,3 @@ header {
     background-color: #007bff;
     color: white !important;
 }
-
-
-
-
