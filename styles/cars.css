@@ -58,6 +58,8 @@ header {
 }
 
 .col-md-6{
+    font-weight: bold;
+    color: white;
     transition: transform 0.3s ease-out;
 }
 
