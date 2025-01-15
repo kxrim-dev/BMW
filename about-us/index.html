@@ -3,173 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../styles/aboutUs.css">
+    <title>Vorstellung der Seitenersteller</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/loadingAnimation.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/cars.css">
 </head>
 <body>
-    <header>
     <div class="startAnimation">
         <img src="../photos/bmw_logo.png" alt="BMW Logo">
     </div> 
-    <nav>
-        <li>
-            <a>Home</a>
-        </li>
-        <li>
-            <a href="../bmw-car/index.html">Autos</a>
-        </li>
-        <li>
-            <a href="../infos-bmw/index.html">Infos</a>
-        </li>
-        <li>
-            <a href="../about-us/index.html">Über uns</a>
-        </li>
-    </nav>
-</header>
-    <h1>
-        Wer sind wir?
-    </h1>
-    <div class="container" >
-    <div class="rectangle" >
-        <h2>Arda Dönmez</h2>
-        <div class="rectanglecontainer">
-            <p>
-                Arda ist der Teamleiter des Projekts und lebt mit 17 Jahren in Leonding. Er bringt umfangreiche Kenntnisse in Webentwicklung und Design mit und hat schon seit seiner Kindheit eine starke Vorliebe für BMWs. Seine Aufgabe ist es, die Startseite unserer Website zu erstellen und zu gestalten, wobei er besonderen Wert auf eine benutzerfreundliche und ansprechende Gestaltung legt. Arda sieht in BMWs ein Symbol für Prestige, Dynamik und sportliche Eleganz. Sein Traumwagen ist der BMW M3 G80 Competition, ein Modell, das seine Leidenschaft für leistungsstarke und stilvolle Fahrzeuge widerspiegelt. Mit seinen Fähigkeiten als Teamleiter und seiner Expertise im Webdesign ist Arda ein unverzichtbares Mitglied unseres Teams.
-            </p>  
-            <img src="../photos/Doenmez_AboutUs.jpg" alt = "Dönmez" class="rectangle img">
-        </div>
+    <a href="../index.html">
+        <img class="logo" src="../photos/bmw_logo2.png" alt="BMW Logo">
+    </a>
+    <div class="main">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                    <a class="nav-link" href="../about-us/index.html">Home</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Autos
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="index.html">Serien</a></li>
+                      <li><a class="dropdown-item" href="engines.html">Motoren</a></li>
+                      <li><a class="dropdown-item" href="x-models.html">X Modelle</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../infos-bmw/index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Infos
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="../infos-bmw/history.html">Geschichte</a></li>
+                      <li><a class="dropdown-item" href="../infos-bmw/index.html">Marken</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../about-us/index.html">Über uns</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
     </div>
-    <div class ="rectangle">
-        <h2>Kerimcan Yağci</h2>
-        <div class="rectanglecontainer">
-            <p>
-                Kerimcan ist ein leidenschaftlicher BMW-Liebhaber seit seinem fünften Lebensjahr, da ihn die Begeisterung seiner Eltern für diese Marke schon in jungen Jahren geprägt hat. Er erstellt und gestaltet den BMW-Katalog, der von Limousinen und Coupés bis hin zu elektrischen Geländewagen reicht, und gibt einen Einblick in die verschiedenen, ikonischen Motoren von BMW, die für ihre beeindruckende Leistung bekannt sind. Kerimcan ist 15 Jahre alt, lebt in Haid und hat türkische Wurzeln. Sein Wissen und seine Fähigkeiten im Bereich BMW und Design sind für unser Team von großer Bedeutung und tragen wesentlich zum Erfolg unseres Projekts bei. Sein Traumwagen ist der BMW M5, der für ihn sowohl Luxus als auch Power widerspiegelt.
-            </p>
-            <img src="../photos/Yagci_AboutUs.jpg" alt = "Yagci" class="rectangle img">
-        </div>
-    </div>
-</div>
-    <div class="container" >
-    <div class="rectangle">
-        <h2>Rron Gashi</h2>
-        <div class="rectanglecontainer">
-            <p>Rron erstellt die 'About Us'-Seite, auf der er jedes Teammitglied vorstellt und deren Kontaktinformationen bereitstellt. Er sorgt dafür, dass die Seite sowohl informativ als auch ansprechend gestaltet ist, um den Besuchern einen klaren Überblick über das Team zu geben. Zusätzlich arbeitet er an der Sonderwagen-Seite, die sich noch in der Entwicklung befindet. Rron hat eine große Leidenschaft für BMWs, insbesondere den BMW i8. Ihn fasziniert die innovative Technik des Fahrzeugs und vor allem die Schmetterlingstüren, die dem Wagen nicht nur ein futuristisches Design verleihen, sondern auch praktisch sind. Mitseinem kreativen Talent in der Webentwicklung trägt Rron entscheidend zum Erfolg unseres Projekts bei. </p>
-            <img src="../photos/Gashi_AboutUs.jpg" alt = "Gashi" class="rectangle img">
-        </div>
-    </div>
-    <div class="rectangle">
-        <h2>Daryan Mamsaleh</h2>
-        <div class="rectanglecontainer">
-            <p>Daryan ist 15 Jahre alt und besitzt eine brennende Begeisterung für BMW. Er erstellt die Informationsseite auf unserer Website, die nicht nur über BMW informiert, sondern auch die reiche Geschichte der Marke beleuchtet. Daryan lebt in Leonding und hat kurdische Wurzeln. Mit seinen beeindruckenden Webdesign-Künsten trägt er maßgeblich zur Gestaltung und Struktur unserer Seite bei. Sein Lieblingswagen ist der Rolls-Royce Phantom, da für ihn der unglaubliche Luxus dieses Fahrzeugs ausschlaggebend ist. Rolls-Royce gehört zum BMW-Konzern, was Daryans Leidenschaft für beide Marken weiter verstärkt.</p>
-            <img src="../photos/Mamsaleh_AboutUs.jpg" alt="Mamsaleh" class="rectangle img">
-        </div>
-    </div>
-</div>
-<h1>
-    Wir sind für euch da – Kontaktiert uns
-</h1>
-</body>
-<div class="bottomNav">
-    <nav>
-        <li>
-            <p>
-                Name:
-            </p>
-        </li>
-        <li>
-            <p>Kerimcan</p>
-        </li>
-        <li>
-            <p>Arda</p>
-        </li>
-        <li>
-            <p>Rron</p>
-        </li>
-        <li>
-            <p>Daryan</p>
-        </li>
-    </nav>
-    <nav>
-        <li>
-            <p>
-                E-Mail:
-            </p>
-        </li>
-        <li>
-            <p>
-                k.yagci@students.htl-leonding.ac.at
-            </p>
-        </li>
-        <li>
-            <p>
-                a.doenmez1@students.htl-leonding.ac.at
-            </p>
-        </li>
-        <li>
-            <p>
-                r.gashi@students.htl-leonding.ac.at
-            </p>
-        </li>
-        <li>
-            <p>
-                d.mamsaleh@students.htl-leonding.ac.at
-            </p>
-        </li>
-    </nav>
-    <nav>
-        <li>
-            <p>
-                Telefon:
-            </p>
-        </li>
-        <li>
-            <p>
-                +43 670 4068504
-            </p>
-        </li>
-        <li>
-            <p>
-                +43 660 6207554
-            </p>
-        </li>
-        <li>
-            <p>
-                +43 660 6499535
-            </p>
-        </li>
-        <li>
-            <p>
-                +43 660 4217927
-            </p>
-        </li>
-    </nav>
-    <nav style ="margin-top: -20px">
-        <li>
-            <a href="https://www.instagram.com" target="_blank">
-                Instagram:
-            </a>
-        </li>
-        <li>
-            <a href="https://www.instagram.com/_kxrim41?igsh=MWh0OWkzOWo5b2h0aw==" target="_blank">
-                kxrim41
-            </a>
-        </li>
-        <li>
-            <a href="https://www.instagram.com/a.dnmz2427?igsh=MWZ4b3Brc212YTUzeA==" target="_blank">
-                a.dnmz2427
-            </a>
-        </li>
-        <li>
-            <a href="https://www.instagram.com/rrxn.vl/profilecard/?igsh=MWF3aDBnamJlODI2cQ==" target="_blank">
-                rrxn.vl
-            </a>
-        </li>
-        <li>
-            <a href="https://www.instagram.com/mamsalehdaryan?igsh=MWd4M2ZoM3ppY3Qwcg==" target="_blank">
-                tschn5si
-            </a>
-        </li>
-    </nav>
-</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </html>
