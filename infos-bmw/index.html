@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../styles/loadingAnimation.css">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/infos.css">
+    <link rel="stylesheet" href="../styles/card.css">
 </head>
 <body>
 <div class="startAnimation">
@@ -25,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item">
-                        <a class="nav-link" href="../about-us/index.html">Home</a>
+                        <a class="nav-link" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -60,7 +61,6 @@
 </div>
 
 <main class="brands-container">
-    <h2 class="section-title">Unsere Marken</h2>
     <div class="card" style="width: 45rem;">
         <img src="../photos/iM-bmw.jpg" class="card-img-top" alt="...">
         <div class="card-body">
@@ -72,75 +72,36 @@
         </div>
     </div>
 
-        <article class="brand-card">
-            <img src="../photos/MINI.jpg" alt="MINI" class="brand-image">
-            <div class="brand-content">
-                <h3 class="brand-name"><strong>MINI</strong></h3>
-                <p class="brand-description">
-                    MINI steht für kompakte, stilvolle Fahrzeuge, die mit ihrem
-                    individuellen Design und urbanen Charme ein einzigartiges Fahrerlebnis
-                    für Stadt- und Landfahrten bieten.
-                </p>
-                <div class="brand-specs">
-                    <div class="spec-item">
-                        <span>Übernahme:</span>
-                        <span>1994</span>
-                    </div>
-                    <div class="spec-item">
-                        <span>Hauptsitz:</span>
-                        <span>Oxford</span>
-                    </div>
-                </div>
-                <a href="https://www.mini.at/de_AT/home.html" target="_blank" class="brand-link">Mehr erfahren</a>
-            </div>
-        </article>
-
-        <article class="brand-card">
-            <img src="../photos/RollsRoyce.jpg" alt="Rolls-Royce" class="brand-image">
-            <div class="brand-content">
-                <h3 class="brand-name"><strong>Rolls-Royce</strong></h3>
-                <p class="brand-description">
-                    Rolls-Royce ist die Luxusmarke der BMW Group und produziert
-                    handgefertigte, exklusive Fahrzeuge, die höchste Ansprüche an Qualität,
-                    Komfort und Luxus erfüllen.
-                </p>
-                <div class="brand-specs">
-                    <div class="spec-item">
-                        <span>Übernahme:</span>
-                        <span>1998</span>
-                    </div>
-                    <div class="spec-item">
-                        <span>Hauptsitz:</span>
-                        <span>Goodwood</span>
-                    </div>
-                </div>
-                <a href="https://www.rolls-roycemotorcars.com/en_US/home.html" target="_blank" class="brand-link">Mehr erfahren</a>
-            </div>
-        </article>
-
-        <article class="brand-card">
-            <img src="../photos/BmwMotorrad.jpg" alt="BMW Motorrad" class="brand-image">
-            <div class="brand-content">
-                <h3 class="brand-name"><strong>BMW Motorrad</strong></h3>
-                <p class="brand-description">
-                    BMW Motorrad ist die Motorradsparte von BMW, die hochwertige Motorräder
-                    für verschiedene Einsatzbereiche wie Sport, Touring und Adventure mit
-                    fortschrittlicher Technik und charakteristischem Design herstellt.
-                </p>
-                <div class="brand-specs">
-                    <div class="spec-item">
-                        <span>Gründung:</span>
-                        <span>1923</span>
-                    </div>
-                    <div class="spec-item">
-                        <span>Hauptsitz:</span>
-                        <span>Berlin</span>
-                    </div>
-                </div>
-                <a href="https://www.bmw-motorrad.at/de/home.html#/filter-alle" target="_blank" class="brand-link">Mehr erfahren</a>
-            </div>
-        </article>
+    <div class="card" style="width: 45rem; height: 35rem;">
+        <img src="../photos/bmw-motorrad.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">BMW Motorrad</h5>
+            <p class="card-text">BMW Motorrad ist die Motorradsparte von BMW, die hochwertige Motorräder
+                für verschiedene Einsatzbereiche wie Sport, Touring und Adventure mit
+                fortschrittlicher Technik und charakteristischem Design herstellt.</p>
+            <a href="https://www.mini.at/de_AT/home.html" target="_blank" class="btn btn-primary">Mehr erfahren</a>
+        </div>
     </div>
+    <div class="card" style="width: 45rem; height: 35rem;">
+        <img src="../photos/rolls-royce.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Rolls-Royce</h5>
+            <p class="card-text">Rolls-Royce ist die Luxusmarke der BMW Group und produziert
+                handgefertigte, exklusive Fahrzeuge, die höchste Ansprüche an Qualität,
+                Komfort und Luxus erfüllen</p>
+            <a href="https://www.rolls-roycemotorcars.com/en_US/home.html" target="_blank" class="btn btn-primary">Mehr
+                erfahren</a>
+        </div>
+    </div>
+    <div class="card" style="width: 45rem; height: 35rem;">
+        <img src="../photos/MINI.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">MINI</h5>
+            <p class="card-text">MINI steht für kompakte, stilvolle Fahrzeuge, die mit ihrem
+                individuellen Design und urbanen Charme ein einzigartiges Fahrerlebnis
+                für Stadt- und Landfahrten bieten.</p>
+            <a href="https://www.mini.at/de_AT/home.html" target="_blank" class="btn btn-primary">Mehr erfahren</a>
+        </div>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
