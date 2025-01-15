@@ -20,6 +20,13 @@ header {
     animation: rotate 5s infinite linear;
 }
 
+.main
+{
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
 @keyframes rotate {
     from {
         transform: rotate(0deg);
