@@ -119,3 +119,8 @@ header {
     background-color: #007bff;
     color: white !important;
 }
+
+#bmw-image
+{
+    margin: 0 auto;
+}
