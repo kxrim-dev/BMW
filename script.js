@@ -1,10 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    window.onload = function() {
-        // Wartet, bis die Seite vollständig geladen ist (einschließlich aller Medien)
-        setTimeout(function() {
-            window.scrollTo(0, 0);  // Setzt die Scroll-Position auf den oberen Rand der Seite
-        }, 0);
-    };
     const fadeInElements = document.querySelectorAll('.fade-in');
 
     const observerOptions = {
