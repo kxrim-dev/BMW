@@ -32,6 +32,7 @@ html, body {
     height: 10vh;
     width: 5%;
     z-index: 2;
+    animation: rotate 5s infinite linear;
 }
 
 .christmasvideo
@@ -325,6 +326,15 @@ video {
 .bottomNav nav li a:hover {
     transform: scale(1.1);
     box-shadow: 0 0 15px rgb(72, 0, 255);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 
