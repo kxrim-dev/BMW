@@ -2,9 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW Markets and Museums Map</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <style>
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+        .legend {
+            background: white;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+        .legend div {
+            margin-bottom: 5px;
+        }
+        .legend .color-box {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        .dark-mode {
+            background-color: #181818;
+            color: white;
+        }
+    </style>
 </head>
 <body>
+<div id="map"></div>
+<script>
+    function initMap() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: 48.137154, lng: 11.576124 },
+            zoom: 5,
+            styles: [
+                { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
+                { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
+                { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] },
+                { featureType: "administrative", elementType: "geometry", stylers: [{ color: "#746855" }] },
+                { featureType: "poi", elementType: "geometry", stylers: [{ color: "#283d6a" }] },
+                { featureType: "poi.park", elementType: "geometry", stylers: [{ color: "#263c3f" }] },
+                { featureType: "road", elementType: "geometry", stylers: [{ color: "#38414e" }] },
+                { featureType: "road.highway", elementType: "geometry", stylers: [{ color: "#746855" }] },
+                { featureType: "water", elementType: "geometry", stylers: [{ color: "#17263c" }] },
+            ],
+        });
 
+        const markets = [
+            { name: "BMW Markt München", position: { lat: 48.137154, lng: 11.576124 } },
+            { name: "BMW Markt Berlin", position: { lat: 52.520008, lng: 13.404954 } },
+            { name: "BMW Markt Hamburg", position: { lat: 53.551086, lng: 9.993682 } },
+        ];
+
+        markets.forEach(market => {
+            new google.maps.Marker({
+                position: market.position,
+                map,
+                title: market.name,
+                icon: {
+                    url: "http://maps.google.com/mapfiles/ms/icons/orange-dot.png",
+                },
+            });
+        });
+
+        const museums = [
+            { name: "BMW Museum München", position: { lat: 48.1767, lng: 11.5562 }, url: "bmw-museum-muenchen.html" },
+            { name: "BMW Museum Berlin", position: { lat: 52.5192, lng: 13.4061 }, url: "bmw-museum-berlin.html" },
+            { name: "BMW Museum Leipzig", position: { lat: 51.3397, lng: 12.3731 }, url: "bmw-museum-leipzig.html" },
+            { name: "BMW Museum Hamburg", position: { lat: 53.5503, lng: 10.0007 } },
+        ];
+
+        museums.forEach(museum => {
+            const marker = new google.maps.Marker({
+                position: museum.position,
+                map,
+                title: museum.name,
+                icon: {
+                    url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+                },
+            });
+
+            if (museum.url) {
+                marker.addListener("click", () => {
+                    window.location.href = museum.url;
+                });
+            }
+        });
+
+        // Legende hinzufügen
+        const legend = document.createElement("div");
+        legend.classList.add("legend", "dark-mode");
+        legend.innerHTML = `
+                <div><span class="color-box" style="background: orange;"></span>Märkte</div>
+                <div><span class="color-box" style="background: blue;"></span>Museen</div>
+            `;
+        map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+    }
+
+    window.onload = initMap;
+</script>
 </body>
 </html>
