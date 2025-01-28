@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMW Markets and Museums Map</title>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnWaoXk_uJOc-cXy1Fn1CUpGsBepw0qLs"></script>
     <style>
         #map {
             height: 100vh;
@@ -38,8 +38,8 @@
 <script>
     function initMap() {
         const map = new google.maps.Map(document.getElementById("map"), {
-            center: { lat: 48.137154, lng: 11.576124 },
-            zoom: 5,
+            center: { lat: 50.110924, lng: 8.682127 },
+            zoom: 6,
             styles: [
                 { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
                 { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
@@ -57,6 +57,8 @@
             { name: "BMW Markt München", position: { lat: 48.137154, lng: 11.576124 } },
             { name: "BMW Markt Berlin", position: { lat: 52.520008, lng: 13.404954 } },
             { name: "BMW Markt Hamburg", position: { lat: 53.551086, lng: 9.993682 } },
+            { name: "BMW Markt Frankfurt", position: { lat: 50.110924, lng: 8.682127 } },
+            { name: "BMW Markt Stuttgart", position: { lat: 48.775846, lng: 9.182932 } }
         ];
 
         markets.forEach(market => {
@@ -71,10 +73,11 @@
         });
 
         const museums = [
-            { name: "BMW Museum München", position: { lat: 48.1767, lng: 11.5562 }, url: "bmw-museum-muenchen.html" },
-            { name: "BMW Museum Berlin", position: { lat: 52.5192, lng: 13.4061 }, url: "bmw-museum-berlin.html" },
-            { name: "BMW Museum Leipzig", position: { lat: 51.3397, lng: 12.3731 }, url: "bmw-museum-leipzig.html" },
-            { name: "BMW Museum Hamburg", position: { lat: 53.5503, lng: 10.0007 } },
+            { name: "BMW Museum München", position: { lat: 48.1767, lng: 11.5562 }, url: "https://www.bmw-welt.com/en.html" },
+            { name: "BMW Museum Berlin", position: { lat: 52.5192, lng: 13.4061 }, url: "https://www.bmw-berlin.de" },
+            { name: "BMW Museum Leipzig", position: { lat: 51.3397, lng: 12.3731 }, url: "https://www.bmw-leipzig.de" },
+            { name: "BMW Museum Hamburg", position: { lat: 53.5503, lng: 10.0007 }, url: "https://www.bmw-hamburg.de" },
+            { name: "BMW Museum Stuttgart", position: { lat: 48.78232, lng: 9.17702 }, url: "https://www.bmw-stuttgart.de" }
         ];
 
         museums.forEach(museum => {
@@ -89,18 +92,18 @@
 
             if (museum.url) {
                 marker.addListener("click", () => {
-                    window.location.href = museum.url;
+                    window.open(museum.url, "_blank");
                 });
             }
         });
 
-        // Legende hinzufügen
+        // Add legend
         const legend = document.createElement("div");
         legend.classList.add("legend", "dark-mode");
         legend.innerHTML = `
-                <div><span class="color-box" style="background: orange;"></span>Märkte</div>
-                <div><span class="color-box" style="background: blue;"></span>Museen</div>
-            `;
+            <div><span class="color-box" style="background: orange;"></span>Märkte</div>
+            <div><span class="color-box" style="background: blue;"></span>Museen</div>
+        `;
         map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
     }
 
