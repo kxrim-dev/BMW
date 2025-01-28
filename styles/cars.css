@@ -11,17 +11,23 @@ header {
     position: relative;
 }
 
-.logo {
-    width: 70px;
-    height: 70px;
+.image-container {
+    display: inline-block;
     position: absolute;
-    top: 20px;
-    left: 75px;
-    transition: transform 5s ease-out;
+    top: 2.5%;
+    left: 6%;
+    z-index: 3;
 }
 
-.logo:hover {
-    transform: rotate(360deg);
+.image-container .logo {
+    z-index: 3;
+    height: 80px;
+    transition: transform 1s ease-in-out;
+    transform: rotate(0deg);
+}
+
+.image-container:hover .logo {
+    transform: rotate(1080deg);
 }
 
 .main
