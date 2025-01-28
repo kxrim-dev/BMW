@@ -39,7 +39,7 @@
     function initMap() {
         const map = new google.maps.Map(document.getElementById("map"), {
             center: { lat: 50.110924, lng: 8.682127 },
-            zoom: 6,
+            zoom: 2,
             styles: [
                 { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
                 { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
@@ -58,7 +58,19 @@
             { name: "BMW Markt Berlin", position: { lat: 52.520008, lng: 13.404954 } },
             { name: "BMW Markt Hamburg", position: { lat: 53.551086, lng: 9.993682 } },
             { name: "BMW Markt Frankfurt", position: { lat: 50.110924, lng: 8.682127 } },
-            { name: "BMW Markt Stuttgart", position: { lat: 48.775846, lng: 9.182932 } }
+            { name: "BMW Markt Stuttgart", position: { lat: 48.775846, lng: 9.182932 } },
+            { name: "BMW Markt New York", position: { lat: 40.712776, lng: -74.005974 } },
+            { name: "BMW Markt Tokyo", position: { lat: 35.689487, lng: 139.691711 } },
+            { name: "BMW Markt Dubai", position: { lat: 25.276987, lng: 55.296249 } },
+            { name: "BMW Markt Sydney", position: { lat: -33.868820, lng: 151.209296 } },
+            { name: "BMW Markt São Paulo", position: { lat: -23.550520, lng: -46.633308 } },
+            { name: "BMW Markt Wien", position: { lat: 48.208176, lng: 16.373819 } },
+            { name: "BMW Markt Salzburg", position: { lat: 47.809490, lng: 13.055010 } },
+            { name: "BMW Markt Zürich", position: { lat: 47.376887, lng: 8.541694 } },
+            { name: "BMW Markt Genf", position: { lat: 46.204391, lng: 6.143158 } },
+            { name: "BMW Markt Mailand", position: { lat: 45.464664, lng: 9.188540 } },
+            { name: "BMW Markt Paris", position: { lat: 48.856613, lng: 2.352222 } },
+            { name: "BMW Markt London", position: { lat: 51.507351, lng: -0.127758 } }
         ];
 
         markets.forEach(market => {
@@ -77,7 +89,12 @@
             { name: "BMW Museum Berlin", position: { lat: 52.5192, lng: 13.4061 }, url: "https://www.bmw-berlin.de" },
             { name: "BMW Museum Leipzig", position: { lat: 51.3397, lng: 12.3731 }, url: "https://www.bmw-leipzig.de" },
             { name: "BMW Museum Hamburg", position: { lat: 53.5503, lng: 10.0007 }, url: "https://www.bmw-hamburg.de" },
-            { name: "BMW Museum Stuttgart", position: { lat: 48.78232, lng: 9.17702 }, url: "https://www.bmw-stuttgart.de" }
+            { name: "BMW Museum Stuttgart", position: { lat: 48.78232, lng: 9.17702 }, url: "https://www.bmw-stuttgart.de" },
+            { name: "BMW Museum New York", position: { lat: 40.758896, lng: -73.985130 }, url: "https://www.bmwusa.com" },
+            { name: "BMW Museum Tokyo", position: { lat: 35.689487, lng: 139.691711 }, url: "https://www.bmw.co.jp" },
+            { name: "BMW Museum Dubai", position: { lat: 25.204849, lng: 55.270783 }, url: "https://www.bmw-dubai.com" },
+            { name: "BMW Museum Sydney", position: { lat: -33.868820, lng: 151.209296 }, url: "https://www.bmw.com.au" },
+            { name: "BMW Museum São Paulo", position: { lat: -23.550520, lng: -46.633308 }, url: "https://www.bmw.com.br" }
         ];
 
         museums.forEach(museum => {
