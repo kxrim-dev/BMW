@@ -25,15 +25,26 @@ html, body {
     position: relative;
 }
 
-.logo {
+.image-container {
+    display: inline-block;
     position: absolute;
     top: 15px;
     left: 50px;
-    height: 10vh;
-    width: 5%;
-    z-index: 2;
-    animation: rotate 5s infinite linear;
+    z-index: 3;
 }
+
+.image-container .logo {
+    z-index: 3;
+    height: 80px;
+    transition: transform 1s ease-in-out;
+    transform: rotate(0deg);
+}
+
+.image-container:hover .logo {
+    transform: rotate(1080deg);
+}
+
+
 
 .christmasvideo
 {
