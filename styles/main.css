@@ -26,14 +26,18 @@ html, body {
 }
 
 .logo {
+    width: 70px;
+    height: 70px;
     position: absolute;
-    top: 15px;
-    left: 50px;
-    height: 10vh;
-    width: 5%;
-    z-index: 2;
-    animation: rotate 5s infinite linear;
+    top: 20px;
+    left: 75px;
+    transition: transform 5s ease-out;
 }
+
+.logo:hover {
+    transform: rotate(360deg);
+}
+
 
 .christmasvideo
 {
@@ -327,16 +331,6 @@ video {
     transform: scale(1.1);
     box-shadow: 0 0 15px rgb(72, 0, 255);
 }
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 
 .carousel-inner h1 {
     color: white;
