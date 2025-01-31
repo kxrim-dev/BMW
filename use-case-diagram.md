@@ -1,0 +1,1 @@
+![UseCaseDiagram](photos/bmw-use-case-diagram.svg)
