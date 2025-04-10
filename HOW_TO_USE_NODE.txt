@@ -1,0 +1,4 @@
+When changing the context of your cards, please go into the terminal in the folder and activate this code, so the search gets instantly updated.
+
+
+node build-index.js
