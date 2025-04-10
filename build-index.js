@@ -6,8 +6,11 @@ const directories = ["bmw-car", "infos-bmw", "about-us"];
 const output = [];
 const basePath = "./";
 
+const baseURL = "/";
+
 directories.forEach((dir) => {
     const dirPath = path.join(basePath, dir);
+
     fs.readdirSync(dirPath).forEach(file => {
         if (file.endsWith(".html")) {
             const filePath = path.join(dirPath, file);
@@ -17,7 +20,7 @@ directories.forEach((dir) => {
 
             const title = doc.querySelector("title")?.textContent.trim() || file;
 
-            // 🔄 Alle Karten-Titel und Texte sammeln
+            // Sammle alle Kartenbeschreibungen
             const cards = [...doc.querySelectorAll(".card")];
             const descriptions = cards.map(card => {
                 const cardTitle = card.querySelector(".card-title")?.textContent.trim() || "";
@@ -25,21 +28,24 @@ directories.forEach((dir) => {
                 return `${cardTitle}: ${cardText}`;
             }).filter(Boolean);
 
-            // Falls keine Karten gefunden wurden: versuch's mit <meta name="description">
             const description = descriptions.length > 0
                 ? descriptions.join(" | ")
                 : doc.querySelector("meta[name='description']")?.getAttribute("content") || "";
 
+            // Erzeuge absolute Pfade
+            const relativeLink = path.join(dir, file).replace(/\\/g, "/");
+            const absoluteLink = baseURL + relativeLink;
+
             output.push({
                 title,
                 description: description.trim(),
-                link: path.join(dir, file).replace(/\\/g, "/")
+                link: absoluteLink
             });
         }
     });
 });
 
-// 📁 "data"-Ordner anlegen, falls noch nicht vorhanden
 fs.mkdirSync("data", { recursive: true });
+
 fs.writeFileSync("data/index.json", JSON.stringify(output, null, 2));
 console.log("✅ index.json erstellt mit", output.length, "Einträgen.");
