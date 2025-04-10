@@ -13,7 +13,7 @@ function walk(dir) {
         const fullPath = path.join(dir, file);
         const stat = fs.statSync(fullPath);
 
-        if (stat.isDirectory()) {
+        if (stat.isDirectory()) {   
             walk(fullPath);
         } else if (file.endsWith(".html")) {
             const relativePath = path.relative(baseDir, fullPath).replace(/\\/g, "/");
