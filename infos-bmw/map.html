@@ -5,33 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMW Markets and Museums Map</title>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnWaoXk_uJOc-cXy1Fn1CUpGsBepw0qLs"></script>
-    <style>
-        #map {
-            height: 100vh;
-            width: 100%;
-        }
-        .legend {
-            background: white;
-            padding: 10px;
-            margin: 10px;
-            border: 1px solid black;
-            border-radius: 5px;
-            font-family: Arial, sans-serif;
-        }
-        .legend div {
-            margin-bottom: 5px;
-        }
-        .legend .color-box {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-        }
-        .dark-mode {
-            background-color: #181818;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="../styles/map.css">
 </head>
 <body>
 <div id="map"></div>
@@ -70,7 +44,18 @@
             { name: "BMW Markt Genf", position: { lat: 46.204391, lng: 6.143158 } },
             { name: "BMW Markt Mailand", position: { lat: 45.464664, lng: 9.188540 } },
             { name: "BMW Markt Paris", position: { lat: 48.856613, lng: 2.352222 } },
-            { name: "BMW Markt London", position: { lat: 51.507351, lng: -0.127758 } }
+            { name: "BMW Markt London", position: { lat: 51.507351, lng: -0.127758 } },
+            { name: "BMW Markt Los Angeles", position: { lat: 34.052235, lng: -118.243683 } },
+            { name: "BMW Markt Toronto", position: { lat: 43.651070, lng: -79.347015 } },
+            { name: "BMW Markt Seoul", position: { lat: 37.566536, lng: 126.977966 } },
+            { name: "BMW Markt Shanghai", position: { lat: 31.230391, lng: 121.473701 } },
+            { name: "BMW Markt Peking", position: { lat: 39.904202, lng: 116.407394 } },
+            { name: "BMW Markt Barcelona", position: { lat: 41.385063, lng: 2.173404 } },
+            { name: "BMW Markt Brüssel", position: { lat: 50.850346, lng: 4.351721 } },
+            { name: "BMW Markt Johannesburg", position: { lat: -26.204103, lng: 28.047304 } },
+            { name: "BMW Markt Mexiko-Stadt", position: { lat: 19.432608, lng: -99.133209 } },
+            { name: "BMW Markt Singapur", position: { lat: 1.352083, lng: 103.819839 } }
+
         ];
 
         markets.forEach(market => {
@@ -94,7 +79,17 @@
             { name: "BMW Museum Tokyo", position: { lat: 35.689487, lng: 139.691711 }, url: "https://www.bmw.co.jp" },
             { name: "BMW Museum Dubai", position: { lat: 25.204849, lng: 55.270783 }, url: "https://www.bmw-dubai.com" },
             { name: "BMW Museum Sydney", position: { lat: -33.868820, lng: 151.209296 }, url: "https://www.bmw.com.au" },
-            { name: "BMW Museum São Paulo", position: { lat: -23.550520, lng: -46.633308 }, url: "https://www.bmw.com.br" }
+            { name: "BMW Museum São Paulo", position: { lat: -23.550520, lng: -46.633308 }, url: "https://www.bmw.com.br" },
+            { name: "BMW Museum London", position: { lat: 51.507351, lng: -0.127758 }, url: "https://www.bmw.co.uk" },
+            { name: "BMW Museum Paris", position: { lat: 48.856613, lng: 2.352222 }, url: "https://www.bmw.fr" },
+            { name: "BMW Museum Milan", position: { lat: 45.464664, lng: 9.188540 }, url: "https://www.bmw.it" },
+            { name: "BMW Museum Toronto", position: { lat: 43.651070, lng: -79.347015 }, url: "https://www.bmw.ca" },
+            { name: "BMW Museum Seoul", position: { lat: 37.566536, lng: 126.977966 }, url: "https://www.bmw.co.kr" },
+            { name: "BMW Museum Shanghai", position: { lat: 31.230391, lng: 121.473701 }, url: "https://www.bmw.com.cn" },
+            { name: "BMW Museum Johannesburg", position: { lat: -26.204103, lng: 28.047304 }, url: "https://www.bmw.co.za" },
+            { name: "BMW Museum Mexico City", position: { lat: 19.432608, lng: -99.133209 }, url: "https://www.bmw.com.mx" },
+            { name: "BMW Museum Singapore", position: { lat: 1.352083, lng: 103.819839 }, url: "https://www.bmw.com.sg" },
+            { name: "BMW Museum Vienna", position: { lat: 48.208176, lng: 16.373819 }, url: "https://www.bmw.at" }
         ];
 
         museums.forEach(museum => {
