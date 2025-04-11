@@ -11,6 +11,7 @@ Pfeiltaste-Links: nach links fahren
 Pfeiltaste-Rechts: nach rechts fahren
 Pfeiltaste-Unten: nach hinten fahren
 Pfeiltaste-Oben: nach vorne fahren
+R: Nach dem verlieren neustarten
 
 ## Gegner-Spawning
 Gegnerische Fahrzeuge spawnen regelmäßig am oberen Bildschirmrand.
