@@ -57,12 +57,13 @@ document.addEventListener("keydown", (e) => {
 function createRandomCar() {
   const carLane = Math.random() * (gameContainer.clientWidth - 60); 
   const newCar = document.createElement("div");
-  newCar.classList.add("otherCar");
+  newCar.classList.add("other-car");
   newCar.style.left = carLane + "px"; 
   newCar.style.top = "-100px"; 
-  newCar.style.width = "60px"; 
-  newCar.style.height = "100px"; 
-  newCar.style.backgroundColor = "red"; 
+  newCar.style.width = "100px"; 
+  newCar.style.height = "200px"; 
+  newCar.style.backgroundImage = "url('enemyCar.png')"; 
+  newCar.style.transform = "rotate(180deg)";
   newCar.style.position = "absolute"; 
   gameContainer.appendChild(newCar); 
 
