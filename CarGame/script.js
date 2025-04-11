@@ -1,7 +1,6 @@
 const car = document.getElementById("car");
 const gameContainer = document.querySelector(".game-container");
 const gameOverText = document.getElementById("game-over");
-const highscoreText = document.getElementById("high-score");
 const startMessage = document.getElementById("start-message");
 
 let carPositionX = 120;
@@ -11,6 +10,11 @@ let moving = false;
 let gameStarted = false;
 let carSpawnInterval;
 let carSpeed = 3;
+let survivalTime = 0;
+let survivalInterval;
+let highscore = 0;
+highscore = localStorage.getItem("highscore") || 0;
+
 
 function moveCar() {
   car.style.left = carPositionX + "px";
@@ -70,19 +74,23 @@ function createRandomCar() {
   let carPosY = -100; 
 
   function moveRandomCar() {
-    carPosY += carSpeed; 
-    newCar.style.top = carPosY + "px"; 
-
+    if (!gameStarted) return;
+  
+    carPosY += carSpeed;
+    newCar.style.top = carPosY + "px";
+  
     if (carPosY > gameContainer.clientHeight) {
       newCar.remove();
+      return;
     }
-
+  
     if (checkCollision(newCar)) {
       gameOver();
     } else {
       requestAnimationFrame(moveRandomCar);
     }
   }
+  
 
   moveRandomCar();
 }
@@ -101,16 +109,9 @@ function gameOver() {
   gameOverText.style.display = "block";
   gameStarted = false;
   moving = false;
-  stopSurvivalTimer();
   clearInterval(carSpawnInterval);
+  stopSurvivalTimer();
 }
-
-function highscore() {
-    highscoreTextisplay = "block";
-    gameStarted = false;
-    moving = false;
-    clearInterval(carSpawnInterval);
-  }
 
 function startGame() {
   startMessage.style.display = "none";
@@ -129,8 +130,19 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-let survivalTime = 0;
-let survivalInterval;
+function stopSurvivalTimer() {
+  clearInterval(survivalInterval);
+
+  if (survivalTime > highscore) {
+    highscore = survivalTime;
+    localStorage.setItem("highscore", highscore);
+  }
+
+  const finalScore = document.getElementById("final-score");
+  finalScore.innerText = `Überlebenszeit: ${survivalTime}s | Highscore: ${highscore}s`;
+
+  console.log(`Final Survival Time: ${survivalTime} seconds`);
+}
 
 function startSurvivalTimer() {
   survivalTime = 0;
@@ -139,11 +151,3 @@ function startSurvivalTimer() {
     console.log(`Survival Time: ${survivalTime} seconds`);
   }, 1000);
 }
-
-function stopSurvivalTimer() {
-  clearInterval(survivalInterval);
-  survivalTime = document.getElementById("survival-time").innerText = survivalTime;
-  console.log(`Final Survival Time: ${survivalTime} seconds`);
-}
-
-
