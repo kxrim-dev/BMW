@@ -3,10 +3,9 @@ const gameContainer = document.querySelector(".game-container");
 const gameOverText = document.getElementById("game-over");
 const startMessage = document.getElementById("start-message");
 
-let carPositionX = 120;
-let carPositionY = 400;
-let speed = 10;
-let moving = false;
+let carPositionX = 450;
+let carPositionY = 200;
+let speed = 5;
 let gameStarted = false;
 let carSpawnInterval;
 let carSpeed = 3;
@@ -15,47 +14,42 @@ let survivalInterval;
 let highscore = 0;
 highscore = localStorage.getItem("highscore") || 0;
 
+const keys = {};
 
 function moveCar() {
+  if (!gameStarted) return;
+
+  if ((keys["ArrowLeft"] || keys["a"]) && carPositionX > 30) {
+    carPositionX -= speed;
+  }
+  if ((keys["ArrowRight"] || keys["d"]) && carPositionX < 900) {
+    carPositionX += speed;
+  }
+  if ((keys["ArrowUp"] || keys["w"]) && carPositionY < 500) {
+    carPositionY += speed;
+  }
+  if ((keys["ArrowDown"] || keys["s"]) && carPositionY > 0) {
+    carPositionY -= speed;
+  }
+
   car.style.left = carPositionX + "px";
   car.style.bottom = carPositionY + "px";
-}
 
-function updatePosition() {
-  if (moving) {
-    moveCar();
-    requestAnimationFrame(updatePosition);
-  }
+  requestAnimationFrame(moveCar);
 }
 
 document.addEventListener("keydown", (e) => {
-  if (!gameStarted) return;
+  keys[e.key.toLowerCase()] = true;
 
-  if (e.key === "ArrowLeft" && carPositionX > 30) {
-    carPositionX -= speed;
-    if (!moving) {
-      moving = true;
-      requestAnimationFrame(updatePosition);
-    }
-  } else if (e.key === "ArrowRight" && carPositionX < 900) {
-    carPositionX += speed;
-    if (!moving) {
-      moving = true;
-      requestAnimationFrame(updatePosition);
-    }
-  } else if (e.key === "ArrowUp" && carPositionY > 0) {
-    carPositionY += speed;
-    if (!moving) {
-      moving = true;
-      requestAnimationFrame(updatePosition);
-    }
-  } else if (e.key === "ArrowDown" && carPositionY < 500) {
-    carPositionY -= speed;
-    if (!moving) {
-      moving = true;
-      requestAnimationFrame(updatePosition);
-    }
+  if (e.key === "Enter" && !gameStarted) {
+    startGame();
+  } else if ((e.key === "r" || e.key === "R") && !gameStarted) {
+    resetGame();
   }
+});
+
+document.addEventListener("keyup", (e) => {
+  keys[e.key.toLowerCase()] = false;
 });
 
 function createRandomCar() {
@@ -75,22 +69,21 @@ function createRandomCar() {
 
   function moveRandomCar() {
     if (!gameStarted) return;
-  
+
     carPosY += carSpeed;
     newCar.style.top = carPosY + "px";
-  
+
     if (carPosY > gameContainer.clientHeight) {
       newCar.remove();
       return;
     }
-  
+
     if (checkCollision(newCar)) {
       gameOver();
     } else {
       requestAnimationFrame(moveRandomCar);
     }
   }
-  
 
   moveRandomCar();
 }
@@ -108,27 +101,22 @@ function checkCollision(otherCar) {
 function gameOver() {
   gameOverText.style.display = "block";
   gameStarted = false;
-  moving = false;
   clearInterval(carSpawnInterval);
   stopSurvivalTimer();
 }
 
 function startGame() {
   startMessage.style.display = "none";
+  gameOverText.style.display = "none";
   gameStarted = true;
   startSurvivalTimer();
   carSpawnInterval = setInterval(createRandomCar, 2000);
   setInterval(() => {
-    carSpeed += 0.1;
+    carSpeed += 1;
     speed += 0.1;
   }, 3000);
+  requestAnimationFrame(moveCar);
 }
-
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Enter" && !gameStarted) {
-    startGame();
-  }
-});
 
 function stopSurvivalTimer() {
   clearInterval(survivalInterval);
@@ -140,14 +128,22 @@ function stopSurvivalTimer() {
 
   const finalScore = document.getElementById("final-score");
   finalScore.innerText = `Überlebenszeit: ${survivalTime}s | Highscore: ${highscore}s`;
-
-  console.log(`Final Survival Time: ${survivalTime} seconds`);
 }
 
 function startSurvivalTimer() {
   survivalTime = 0;
   survivalInterval = setInterval(() => {
     survivalTime += 1;
-    console.log(`Survival Time: ${survivalTime} seconds`);
   }, 1000);
+}
+
+function resetGame() {
+  carPositionX = 450;
+  carPositionY = 200;
+  speed = 5;
+  carSpeed = 3;
+  document.querySelectorAll(".other-car").forEach(car => car.remove());
+  survivalTime = 0;
+  moveCar();
+  startGame();
 }
