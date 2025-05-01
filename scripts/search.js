@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const query = searchInput.value.trim().toLowerCase();
         if (!query) return;
 
+        resultContainer.style.display = "none";
+        resultContainer.innerHTML = '';
+
         try {
             const response = await fetch('../data/index.json');
             const data = await response.json();
@@ -18,10 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 item.description.toLowerCase().includes(query)
             );
 
-            resultContainer.innerHTML = '';
-
             if (results.length === 0) {
                 resultContainer.innerHTML = '<p class="text-white">Keine Ergebnisse gefunden.</p>';
+                resultContainer.style.display = "block";
                 return;
             }
 
@@ -46,10 +48,13 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             resultContainer.appendChild(row);
-            resultContainer.scrollIntoView({ behavior: "smooth" }); // Optional: scrollt automatisch zum Ergebnis
+            resultContainer.style.display = "block";
+            resultContainer.scrollIntoView({ behavior: "smooth" });
+
         } catch (err) {
             console.error("Fehler beim Laden der Daten:", err);
             resultContainer.innerHTML = '<p class="text-danger">Fehler beim Laden der Ergebnisse.</p>';
+            resultContainer.style.display = "block";
         }
     });
 });

@@ -1,11 +1,19 @@
 body {
-  background-color: #111;
+  background-color: black;
   color: white;
   font-family: Arial, sans-serif;
   text-align: center;
   margin: 0;
   padding: 0;
 }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  z-index: -1;
+}
+
 canvas {
   background-color: #222;
   display: block;
@@ -18,7 +26,7 @@ canvas {
 }
 #gameOverBox {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: #222;
@@ -30,6 +38,11 @@ canvas {
   text-align: center;
   border-radius: 10px;
 }
+
+.navbar-nav .nav-link {
+  color: white !important;
+}
+
 #gameOverBox button {
   margin-top: 15px;
   padding: 10px 20px;
