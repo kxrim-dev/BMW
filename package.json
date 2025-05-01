@@ -1,5 +1,26 @@
 {
   "dependencies": {
+    "express": "^5.1.0",
     "jsdom": "^26.0.0"
-  }
+  },
+  "name": "bmw",
+  "version": "1.0.0",
+  "description": "Das BMW-Webprojekt hat das Ziel, eine elegante und benutzerfreundliche Website zu gestalten, die den Luxus und die Identität der Marke BMW widerspiegelt. Die Website soll ein kreatives Interface bieten, die Nutzererfahrung verbessern und umfassende Informationen zu BMW-Fahrzeugen, Preisen und der Markengeschichte bereitstellen.\r ---",
+  "main": "build-index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KerYagciHTL/BMW.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KerYagciHTL/BMW/issues"
+  },
+  "homepage": "https://github.com/KerYagciHTL/BMW#readme"
 }

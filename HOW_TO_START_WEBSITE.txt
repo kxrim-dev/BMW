@@ -1,0 +1,3 @@
+Make sure to be in Directory "BMW" and then paste this simple comment into the terminal in vs code:
+
+node server.js

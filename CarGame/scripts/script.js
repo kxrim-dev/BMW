@@ -1,6 +1,9 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
+const currentUser = localStorage.getItem("currentUser");
+if (!currentUser) window.location.href = "login.html"; // redirect if not logged in
+
 const laneCount = 4;
 const laneWidth = canvas.width / laneCount;
 const carWidth = 100;
@@ -99,6 +102,16 @@ function gameOver() {
     document.getElementById("retryBtn").onclick = () => {
         document.location.reload();
     };
+
+    // Save highscore
+    fetch("/api/users", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            username: currentUser,
+            score: score
+        }),
+    }).then(showLeaderboard); // danach sofort aktualisieren
 }
 
 function updateGame() {
@@ -134,4 +147,38 @@ function updateGame() {
     requestAnimationFrame(updateGame);
 }
 
+function showLeaderboard() {
+    fetch("/api/users")
+        .then((res) => res.json())
+        .then((users) => {
+            const leaderboard = Object.entries(users)
+                .map(([name, data]) => ({ name, score: data.highscore ?? 0 }))
+                .sort((a, b) => b.score - a.score);
+
+            const leaderboardDiv = document.getElementById("leaderboard");
+            leaderboardDiv.innerHTML = "";
+
+            leaderboard.forEach((entry, index) => {
+                const row = document.createElement("div");
+                row.textContent = `#${index + 1} – ${entry.name}: ${entry.score}`;
+
+                if (entry.name === currentUser) {
+                    row.style.color = "gold";
+                    row.style.fontWeight = "bold";
+                }
+
+                leaderboardDiv.appendChild(row);
+            });
+        })
+        .catch((err) => {
+            console.error("Fehler beim Laden der Bestenliste:", err);
+        });
+}
+
+function logout() {
+    localStorage.removeItem("currentUser");
+    window.location.href = "login.html";
+}
+
 updateGame();
+showLeaderboard();
