@@ -101,6 +101,7 @@ function gameOver() {
 
     document.getElementById("retryBtn").onclick = () => {
         document.location.reload();
+        startDriving();
     };
 
     // Save highscore
@@ -135,9 +136,11 @@ function updateGame() {
         enemy.draw(ctx);
 
         if (checkCollision(playerCar, enemy)) {
-            gameOver();
-            return;
-        }
+        handleCrash();
+        gameOver();
+        return;
+}
+
 
         if (enemy.y > canvas.height) {
             enemyCars.splice(i, 1);
