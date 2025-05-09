@@ -1,22 +1,22 @@
 # Überblick
-In diesem Spiel fährt der Nutzer einen BMW. Ziel des Spiels ist es, ein Fahrzeug zu steuern und entgegenkommenden Autos auszuweichen. Die Herausforderung liegt in der Reaktionszeit und Geschicklichkeit des Spielers, bereits ein Zusammenstoß führt zum Game Over. Zusätzlich wird ein Highscore-System implementiert, um die besten Ergebnisse zu speichern und anzuzeigen. Verbesserte Texturen sind auch noch für die nahe Zukunft geplant.
+In diesem Spiel fährt der Nutzer einen BMW. Ziel des Spiels ist es, ein Fahrzeug zu steuern und entgegenkommenden Autos auszuweichen. Die Herausforderung liegt in der Reaktionszeit des Spielers, ein Zusammenstoß führt zum Game Over. Zusätzlich gibt es ein Highscore-System , um die besten Ergebnisse zu speichern und anzuzeigen. Verbesserte Texturen sind auch noch für die nahe Zukunft geplant.
 
 ## Spielmechanik
 Spielersteuerung
-Der Spieler steuert ein Auto, das sich horizontal und vertikal auf einer dreispurigen Straße bewegen kann.
+Der Spieler steuert ein Auto, das sich horizontal und vertikal auf eine Autobahn bewegen kann.
 
-Steuerung erfolgt über die Pfeiltasten:
+Steuerung erfolgt über WASD:
 
-Pfeiltaste-Links: nach links fahren
-Pfeiltaste-Rechts: nach rechts fahren
-Pfeiltaste-Unten: nach hinten fahren
-Pfeiltaste-Oben: nach vorne fahren
+A: nach links fahren
+D: nach rechts fahren
+S: Bremsen
+W: Beschleunigen
 R: Nach dem verlieren neustarten
 
 ## Gegner-Spawning
 Gegnerische Fahrzeuge spawnen regelmäßig am oberen Bildschirmrand.
 
-Dass die Spawnrate und Geschwindigkeit der gegnerischen Autos sich mit steigender Spielzeit erhöhen ist für die Zukunft geplant.
+Je länger der Spieler überlebt, werden die entgegenkommenden Autos Schneller.
 
 ## Kollisionsabfrage
 Es werden präzise Hitboxen genutzt, um eine realistische Kollisionserkennung zu gewährleisten.
@@ -24,13 +24,13 @@ Es werden präzise Hitboxen genutzt, um eine realistische Kollisionserkennung zu
 Sobald sich die Hitboxen des Spielerautos und eines gegnerischen Fahrzeugs überlappen, endet das Spiel.
 
 ## Highscore-System
-Bei Spielende wird die erreichte Punktzahl (basierend auf der überlebten Zeit oder Anzahl vermiedener Fahrzeuge) berechnet.
+Bei Spielende wird die erreichte Punktzahl (basierend auf der überlebten Zeit) berechnet.
 
-Das Spiel speichert die höchste Punktzahl lokal über den localStorage des Browsers.
+Das Spiel speichert die Punktzahl über die User Datenbank.
 
-Beim Start des Spiels wird der aktuelle Highscore angezeigt.
+Während dem Spielen des Spiels wird der aktuelle Highscore angezeigt.
 
-Wenn der Spieler einen neuen Highscore erreicht, wird dieser automatisch aktualisiert.
+Wenn der Spieler einen Durchlauf beendet, wird dieser Score automatisch aktualisiert.
 
 ## Verbesserte Texturen und Grafik
 Fahrzeuge werden detaillierte, individuell gestaltete 2D-Sprites besitzen.
@@ -46,6 +46,7 @@ Hintergrundanimationen (z. B. vorbeiziehende Landschaft)
 Optional: Tag-Nacht-Wechsel oder Wettereinflüsse wie Regen oder Schnee zur Erhöhung der visuellen Abwechslung.
 
 ## Weitere Möglichen Features
+
 ### Startmenü mit:
 
 "Start"-Button
