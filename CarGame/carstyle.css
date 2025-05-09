@@ -1,0 +1,105 @@
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  z-index: -1;
+}
+
+canvas {
+  background-color: #222;
+  display: block;
+  margin: 20px auto;
+  border: 2px solid white;
+}
+#score {
+  font-size: 24px;
+  margin-top: 10px;
+}
+#gameOverBox {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #222;
+  border: 2px solid white;
+  padding: 30px;
+  color: white;
+  font-size: 20px;
+  z-index: 10;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+}
+
+#gameOverBox button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#logoutArea {
+  margin-top: 10px;
+}
+
+#authForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+#authForm input {
+  padding: 10px;
+  font-size: 16px;
+  width: 250px;
+}
+
+#authForm button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#message {
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+#leaderboardContainer {
+  width: 300px;
+  margin: 20px auto;
+  background-color: #222;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 15px;
+  color: white;
+  font-size: 16px;
+  max-height: 250px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+#leaderboardContainer h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: gold;
+}
+
+#leaderboard div {
+  padding: 4px 0;
+  border-bottom: 1px solid #444;
+}

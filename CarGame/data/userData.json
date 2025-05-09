@@ -2,5 +2,17 @@
   "kxrim": {
     "password": "Kerim",
     "highscore": 14136
+  },
+  "Arda": {
+    "password": "123",
+    "highscore": 0
+  },
+  "Owner": {
+    "password": "123",
+    "highscore": 110
+  },
+  "owner": {
+    "password": "123",
+    "highscore": 0
   }
 }

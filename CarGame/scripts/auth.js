@@ -40,8 +40,8 @@ form.addEventListener("submit", async (e) => {
 });
 
 registerBtn.addEventListener("click", async () => {
-  const username = document.getElementById("username").value.trim();
-  const password = document.getElementById("password").value;
+  const username = document.querySelector('.sign-up-form input[placeholder="Benutzername"]').value.trim();
+  const password = document.querySelector('.sign-up-form input[placeholder="Passwort"]').value;
 
   if (!username || !password) {
     showMessage("Bitte alle Felder ausfüllen!", true);
@@ -66,3 +66,4 @@ registerBtn.addEventListener("click", async () => {
     console.error(err);
   }
 });
+
