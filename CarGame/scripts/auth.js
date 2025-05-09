@@ -1,69 +1,95 @@
-const form = document.getElementById("authForm");
-const registerBtn = document.getElementById("registerBtn");
-const messageBox = document.getElementById("message");
+document.addEventListener("DOMContentLoaded", () => {
+  const loginForm = document.getElementById("authForm");
+  const registerForm = document.getElementById("registerForm");
+  const loginMessage = document.getElementById("login-message");
+  const registerMessage = document.getElementById("register-message");
 
-function showMessage(text, isError = false) {
-    messageBox.textContent = text;
-    messageBox.style.color = isError ? "tomato" : "lightgreen";
-    messageBox.style.visibility = "visible";
+  function showMessage(element, text, isError = false) {
+    element.textContent = text;
+    element.classList.remove("success", "error");
+    element.classList.add(isError ? "error" : "success");
+    element.style.display = "block";
+
     setTimeout(() => {
-      messageBox.style.visibility = "hidden";
-    }, 3000);
-  }
-  
-
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const username = document.getElementById("username").value.trim();
-  const password = document.getElementById("password").value;
-
-  if (!username || !password) {
-    showMessage("Bitte alle Felder ausfüllen!", true);
-    return;
+      element.style.display = "none";
+    }, 1500);
   }
 
-  try {
-    const res = await fetch("/api/users");
-    const users = await res.json();
+  // LOGIN
+  loginForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value;
 
-    if (!users[username] || users[username].password !== password) {
-      showMessage("❌ Falsche Login-Daten!", true);
+    if (!username || !password) {
+      showMessage(loginMessage, "Bitte alle Felder ausfüllen!", true);
       return;
     }
 
-    localStorage.setItem("currentUser", username);
-    window.location.href = "index.html";
-  } catch (err) {
-    showMessage("Serverfehler beim Login!", true);
-    console.error(err);
-  }
-});
+    try {
+      const res = await fetch("/api/users");
+      const users = await res.json();
 
-registerBtn.addEventListener("click", async () => {
-  const username = document.querySelector('.sign-up-form input[placeholder="Benutzername"]').value.trim();
-  const password = document.querySelector('.sign-up-form input[placeholder="Passwort"]').value;
+      if (!res.ok || typeof users !== "object") {
+        showMessage(loginMessage, "❌ Serverfehler beim Login", true);
+        return;
+      }
 
-  if (!username || !password) {
-    showMessage("Bitte alle Felder ausfüllen!", true);
-    return;
-  }
+      const user = users[username];
+      if (!user) {
+        showMessage(loginMessage, "❌ Benutzer nicht gefunden", true);
+        return;
+      }
 
-  try {
-    const res = await fetch("/api/users", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, password, register: true }),
-    });
+      if (user.password !== password) {
+        showMessage(loginMessage, "❌ Falsches Passwort", true);
+        return;
+      }
 
-    if (res.status === 409) {
-      showMessage("Benutzername bereits vergeben!", true);
+      localStorage.setItem("currentUser", username);
+      showMessage(loginMessage, "✅ Login erfolgreich!");
+      setTimeout(() => window.location.href = "index.html", 1500);
+    } catch (err) {
+      console.error(err);
+      showMessage(loginMessage, "❌ Fehler beim Login", true);
+    }
+  });
+
+  // REGISTER
+  registerForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const username = registerForm.querySelector('input[placeholder="Benutzername"]').value.trim();
+    const password = registerForm.querySelector('input[placeholder="Passwort"]').value;
+
+    if (!username || !password) {
+      showMessage(registerMessage, "Bitte alle Felder ausfüllen!", true);
       return;
     }
 
-    showMessage("Registrierung erfolgreich!");
-  } catch (err) {
-    showMessage("Serverfehler bei Registrierung!", true);
-    console.error(err);
-  }
-});
+    try {
+      const res = await fetch("/api/users", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password, register: true }),
+      });
 
+      if (res.status === 409) {
+        showMessage(registerMessage, "❌ Benutzername schon vergeben", true);
+        return;
+      }
+
+      if (!res.ok) {
+        showMessage(registerMessage, "❌ Fehler bei Registrierung", true);
+        return;
+      }
+
+      localStorage.setItem("currentUser", username);
+      showMessage(registerMessage, "✅ Registrierung erfolgreich!");
+      setTimeout(() => window.location.href = "index.html", 1500);
+    } catch (err) {
+      console.error(err);
+      showMessage(registerMessage, "❌ Serverfehler bei Registrierung", true);
+    }
+  });
+});

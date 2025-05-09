@@ -504,3 +504,23 @@ canvas {
   padding: 4px 0;
   border-bottom: 1px solid #444;
 }
+
+.form-message {
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      display: none;
+    }
+
+    .form-message.success {
+      background-color: cyan !important;
+      color: white;
+    }
+
+    .form-message.error {
+      background-color: #dc3545;
+      color: white;
+    }
