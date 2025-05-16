@@ -33,19 +33,19 @@ BMW
 
 - **Kerimcan Yagci**  
   → Hat die **Login-Funktionalität** implementiert und an der **Highscore-Funktion** gearbeitet.  
-  → Insgesamt **14 Commits**.
+  → Insgesamt **15 Commits**.
 
 - **Arda Dönmez**  
   → Hat das **Styling für den Login** übernommen und ebenfalls **am Spiel (z.B. Steuerung, Sounddesign)** mitgearbeitet.  
-  → Insgesamt **9 Commits**.
+  → Insgesamt **10 Commits**.
 
 - **Rron Gashi**  
   → Hat die **Sprint-Review-Dokumentation**, die **Spielbeschreibung** sowie das **Use-Case-Diagramm** erstellt.  
-  → Insgesamt **11 Commits**.
+  → Insgesamt **13 Commits**.
 
 - **Daryan Mamsaleh**  
   → Hat am **Spiel selbst mitentwickelt** und eine **Tipps-Seite** für Spieler erstellt.  
-  → Insgesamt **8 Commits**.
+  → Insgesamt **9 Commits**.
 
 ---
 
