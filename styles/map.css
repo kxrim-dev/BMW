@@ -1,9 +1,15 @@
+body{
+    background: #2c2b2b;
+
+}
 #map {
-    height: 100vh;
-    width: 100%;
+    margin-left: 5%;
+    margin-top: 5vh;
+    height: 90vh;
+    width: 90%;
 }
 .legend {
-    background: white;
+    background: #2c2b2b;
     padding: 10px;
     margin: 10px;
     border: 1px solid black;
