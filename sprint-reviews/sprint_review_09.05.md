@@ -23,7 +23,7 @@ BMW
 
 ## 🔍 1. Sprintziel(e)
  
-> - Use Case Diagram der Js Anwendung (Driving Simulator)
+> - Use Case Diagram der JavaScript Anwendung (Driving Simulator)
 > - Game Description in einer Markdown Datei
 > - Spiel Mechaniken und Aussehen verbessern
 
@@ -33,19 +33,19 @@ BMW
 
 - **Kerimcan Yagci**  
   → Hat die **Login-Funktionalität** implementiert und an der **Highscore-Funktion** gearbeitet.  
-  → Insgesamt **19 Commits**.
+  → Insgesamt **15 Commits**.
 
 - **Arda Dönmez**  
-  → Hat das **Styling für den Login** übernommen und ebenfalls **am Spiel (z.B. Steuerung, Optik)** mitgearbeitet.  
-  → Insgesamt **14 Commits**.
+  → Hat das **Styling für den Login** übernommen und ebenfalls **am Spiel (z.B. Steuerung, Sounddesign)** mitgearbeitet.  
+  → Insgesamt **10 Commits**.
 
 - **Rron Gashi**  
   → Hat die **Sprint-Review-Dokumentation**, die **Spielbeschreibung** sowie das **Use-Case-Diagramm** erstellt.  
-  → Insgesamt **15 Commits**.
+  → Insgesamt **13 Commits**.
 
 - **Daryan Mamsaleh**  
   → Hat am **Spiel selbst mitentwickelt** und eine **Tipps-Seite** für Spieler erstellt.  
-  → Insgesamt **16 Commits**.
+  → Insgesamt **9 Commits**.
 
 ---
 
