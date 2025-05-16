@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW Marken</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/infos.css">
+    <link rel="stylesheet" href="../styles/card.css">
+</head>
+<body>
+<div class ="image-container">
+    <img class="logo" src="../photos/bmw_logo2.png" alt="BMW Logo">
+</div>
+<div class="main">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../CarGame/index.html">Spiel</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Autos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../bmw-car/index.html">Serien</a></li>
+                            <li><a class="dropdown-item" href="../bmw-car/engines.html">Motoren</a></li>
+                            <li><a class="dropdown-item" href="../bmw-car/x-models.html">X-Modelle</a></li>
+                            <li><a class="dropdown-item" href="../bmw-car/e-models.html">E-Modelle</a></li>
+                            <li><a class="dropdown-item" href="../bmw-car/special.html">Sonderwagen</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="../bmw-car/index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Infos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../infos-bmw/history.html">Geschichte</a></li>
+                            <li><a class="dropdown-item" href="../infos-bmw/index.html">Marken</a></li>
+                            <li><a class="dropdown-item" href="../infos-bmw/sustainability.html">Sustainability</a></li>
+                            <li><a class="dropdown-item" href="../infos-bmw/cooperation.html">Kooperationen</a></li>
+                            <li><a class="dropdown-item" href="../infos-bmw/map.html">Unsere Standorte</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about-us/index.html">Über uns</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container mt-4" id="search-results"></div>
+<main class="brands-container">
+
+    <div class="card" style="width: 50rem; height: 33rem;">
+        <img src="../photos/iM-bmw.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Kaufberatung</h5>
+            <p class="card-text"> Wir bei BMW können ihnen eine weite Breite von Autos anbieten, falls sie nicht wissen welches sie wollen, kontaktieren Sie uns bei den "Mehr erfahren" knopf </p>
+            <a href="https://www.dasweltauto.at/?wt_ga=1157786805069267_&wt_kw=b_1157786805069267_%2Bauto%20%2Bonline%20%2Bkaufen&pk_campaign=adwords&pk_kwd=Gebrauchtwagen%20Exact&keyword=%2Bauto%20%2Bonline%20%2Bkaufen&network=o&creative=-c&msclkid=c09226cbef52193c7d1b4eed36dd0e10&utm_source=bing&utm_medium=cpc&utm_campaign=Autokauf%20Online%20-%20Generic%20(Search)&utm_term=%2Bauto%20%2Bonline%20%2Bkaufen&utm_content=Auto%20%2F%20Auto%20gebraucht%20%2B%20Online" target="_blank" class="btn btn-primary">Mehr erfahren</a>
+        </div>
+    </div>
+
+
+</main>
+<script src="../scripts/search.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
