@@ -23,11 +23,33 @@ BMW
 
 ## 🔍 1. Sprintziel(e)
  
-> - Use Case Diagram der Js Anwendung (Driving Simulator)
+> - Use Case Diagram der JavaScript Anwendung (Driving Simulator)
 > - Game Description in einer Markdown Datei
 > - Spiel Mechaniken und Aussehen verbessern
 
 ---
+
+## 👨‍💻 Teambeiträge
+
+- **Kerimcan Yagci**  
+  → Hat die **Login-Funktionalität** implementiert und an der **Highscore-Funktion** gearbeitet.  
+  → Insgesamt **15 Commits**.
+
+- **Arda Dönmez**  
+  → Hat das **Styling für den Login** übernommen und ebenfalls **am Spiel (z.B. Steuerung, Sounddesign)** mitgearbeitet.  
+  → Insgesamt **10 Commits**.
+
+- **Rron Gashi**  
+  → Hat die **Sprint-Review-Dokumentation**, die **Spielbeschreibung** sowie das **Use-Case-Diagramm** erstellt.  
+  → Insgesamt **13 Commits**.
+
+- **Daryan Mamsaleh**  
+  → Hat am **Spiel selbst mitentwickelt** und eine **Tipps-Seite** für Spieler erstellt.  
+  → Insgesamt **9 Commits**.
+
+---
+
+
 
 ## ✅ 2. Was wurde erledigt?
 
@@ -37,13 +59,16 @@ BMW
 | 2  | Login                | ✅ Erledigt   | Session-Handling implementiert                    |
 | 3  | Spielverbesserung    | ✅ Erledigt   | Bestenliste, Natürlichere Steuerung des Autos     |
 | 4  | Use-Case-Diagramm    | ✅ Erledigt   | Use Case Diagram erstellt                         |
+| 5  | Spiel Texturen       | ❌ Nicht Erl. | Die Spiel Texturen werden noch in zukunft verbes. |
 
 ---
 
-## ❌ 3. Was wurde nicht erledigt und warum?
+## ❌ 3. Was wir als Nächstes umsetzen möchten
 
-> Alles geplante wurde erledigt
----
+- **Live-Highscore mit WebSockets** (automatische Aktualisierung der Bestenliste)
+- **Soundeffekte und Hintergrundmusik** im Spiel
+- **Level-System oder Punkte-Belohnungen** für längeres Fahren
+- Allgemeine **Code-Optimierung**
 
 ## 🖥️ 4. Live-Demo (wenn möglich)
 
