@@ -29,6 +29,28 @@ BMW
 
 ---
 
+## 👨‍💻 Teambeiträge
+
+- **Kerimcan Yagci**  
+  → Hat die **Login-Funktionalität** implementiert und an der **Highscore-Funktion** gearbeitet.  
+  → Insgesamt **9 Commits**.
+
+- **Arda Dönmez**  
+  → Hat das **Styling für den Login** übernommen und ebenfalls **am Spiel (z.B. Steuerung, Optik)** mitgearbeitet.  
+  → Insgesamt **8 Commits**.
+
+- **Rron Gashi**  
+  → Hat die **Sprint-Review-Dokumentation**, die **Spielbeschreibung** sowie das **Use-Case-Diagramm** erstellt.  
+  → Insgesamt **7 Commits**.
+
+- **Daryan Mamsaleh**  
+  → Hat am **Spiel selbst mitentwickelt** und eine **Tipps-Seite** für Spieler erstellt.  
+  → Insgesamt **8 Commits**.
+
+---
+
+
+
 ## ✅ 2. Was wurde erledigt?
 
 | #  | Aufgabe / Story      | Status        | Kurzbeschreibung                                  |
@@ -40,10 +62,12 @@ BMW
 
 ---
 
-## ❌ 3. Was wurde nicht erledigt und warum?
+##  Was wir als Nächstes umsetzen möchten
 
-> Alles geplante wurde erledigt
----
+- **Live-Highscore mit WebSockets** (automatische Aktualisierung der Bestenliste)
+- **Soundeffekte und Hintergrundmusik** im Spiel
+- **Level-System oder Punkte-Belohnungen** für längeres Fahren
+- Allgemeine **Code-Optimierung**
 
 ## 🖥️ 4. Live-Demo (wenn möglich)
 
