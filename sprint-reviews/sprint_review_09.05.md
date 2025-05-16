@@ -33,19 +33,19 @@ BMW
 
 - **Kerimcan Yagci**  
   → Hat die **Login-Funktionalität** implementiert und an der **Highscore-Funktion** gearbeitet.  
-  → Insgesamt **9 Commits**.
+  → Insgesamt **19 Commits**.
 
 - **Arda Dönmez**  
   → Hat das **Styling für den Login** übernommen und ebenfalls **am Spiel (z.B. Steuerung, Optik)** mitgearbeitet.  
-  → Insgesamt **8 Commits**.
+  → Insgesamt **14 Commits**.
 
 - **Rron Gashi**  
   → Hat die **Sprint-Review-Dokumentation**, die **Spielbeschreibung** sowie das **Use-Case-Diagramm** erstellt.  
-  → Insgesamt **7 Commits**.
+  → Insgesamt **15 Commits**.
 
 - **Daryan Mamsaleh**  
   → Hat am **Spiel selbst mitentwickelt** und eine **Tipps-Seite** für Spieler erstellt.  
-  → Insgesamt **8 Commits**.
+  → Insgesamt **16 Commits**.
 
 ---
 
@@ -59,10 +59,11 @@ BMW
 | 2  | Login                | ✅ Erledigt   | Session-Handling implementiert                    |
 | 3  | Spielverbesserung    | ✅ Erledigt   | Bestenliste, Natürlichere Steuerung des Autos     |
 | 4  | Use-Case-Diagramm    | ✅ Erledigt   | Use Case Diagram erstellt                         |
+| 5  | Spiel Texturen       | ❌ Nicht Erl. | Die Spiel Texturen werden noch in zukunft verbes. |
 
 ---
 
-##  Was wir als Nächstes umsetzen möchten
+## ❌ 3. Was wir als Nächstes umsetzen möchten
 
 - **Live-Highscore mit WebSockets** (automatische Aktualisierung der Bestenliste)
 - **Soundeffekte und Hintergrundmusik** im Spiel
