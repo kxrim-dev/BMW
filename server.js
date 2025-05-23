@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const http = require("http");
 const WebSocket = require("ws");
+const os = require("os");
 
 const app = express();
 const PORT = 3000;
@@ -14,7 +15,6 @@ const DATA_FILE = path.join(__dirname, "CarGame", "data", "userData.json");
 app.use(express.static(__dirname));
 app.use(express.json());
 
-// Benutzerliste bereitstellen (für Login)
 app.get("/api/users", (req, res) => {
   try {
     const users = JSON.parse(fs.readFileSync(DATA_FILE, "utf8"));
@@ -28,7 +28,6 @@ app.get("/api/users", (req, res) => {
 wss.on("connection", (ws) => {
   console.log("📡 Neuer WebSocket-Client verbunden");
 
-  // Beim Verbinden gleich Daten schicken
   try {
     const users = JSON.parse(fs.readFileSync(DATA_FILE, "utf8"));
     ws.send(JSON.stringify({ type: "users", users }));
@@ -60,7 +59,6 @@ wss.on("connection", (ws) => {
             console.log(`🔥 Highscore für ${username} auf ${score} gesetzt`);
           }
         }
-
         // Broadcast to all clients after any score update
         wss.clients.forEach((client) => {
           if (client.readyState === WebSocket.OPEN) {
@@ -129,6 +127,24 @@ app.post("/api/users", (req, res) => {
   }
 });
 
+// Hilfsfunktion: lokale IPv4-Adressen ermitteln
+function getLocalIPs() {
+  const nets = os.networkInterfaces();
+  const results = [];
+  for (const name of Object.keys(nets)) {
+    for (const net of nets[name]) {
+      if (net.family === "IPv4" && !net.internal) {
+        results.push(net.address);
+      }
+    }
+  }
+  return results;
+}
+
 server.listen(PORT, () => {
-  console.log(`✅ Server läuft mit WebSocket unter http://localhost:${PORT}`);
+  const ips = getLocalIPs();
+  console.log("✅ Server läuft mit WebSocket unter:");
+  ips.forEach(ip => {
+    console.log(`   → http://${ip}:${PORT}`);
+  });
 });

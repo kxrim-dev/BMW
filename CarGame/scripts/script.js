@@ -30,8 +30,12 @@ class Car {
     }
   }
   move() {
-    // Bewegung wird jetzt in der Game-Loop gemacht
-    this.x = lanes[playerLane];
+    // Smooth lane change with lerp
+    const targetX = lanes[playerLane];
+    this.x += (targetX - this.x) * 0.3; // 0.3 = schnell, 0.1 = langsam
+
+    if (Math.abs(targetX - this.x) < 1) this.x = targetX;
+
     if (upPressed && this.y > 0) {
       this.y -= this.speed;
     }
@@ -120,29 +124,19 @@ let downPressed = false;
 // Taste gedrückt/losgelassen merken
 document.addEventListener("keydown", (e) => {
   if (!gameRunning) return;
-  if (e.code === "ArrowLeft" || e.code === "KeyA") leftPressed = true;
-  if (e.code === "ArrowRight" || e.code === "KeyD") rightPressed = true;
+  if ((e.code === "ArrowLeft" || e.code === "KeyA") && playerLane > 0) {
+    playerLane--;
+  }
+  if ((e.code === "ArrowRight" || e.code === "KeyD") && playerLane < laneCount - 1) {
+    playerLane++;
+  }
   if (e.code === "ArrowUp" || e.code === "KeyW") upPressed = true;
   if (e.code === "ArrowDown" || e.code === "KeyS") downPressed = true;
 });
 document.addEventListener("keyup", (e) => {
-  if (e.code === "ArrowLeft" || e.code === "KeyA") leftPressed = false;
-  if (e.code === "ArrowRight" || e.code === "KeyD") rightPressed = false;
   if (e.code === "ArrowUp" || e.code === "KeyW") upPressed = false;
   if (e.code === "ArrowDown" || e.code === "KeyS") downPressed = false;
 });
-
-// Lane-Wechsel in der Game-Loop
-function handleLaneChange() {
-  if (leftPressed && playerLane > 0) {
-    playerLane--;
-    leftPressed = false;
-  }
-  if (rightPressed && playerLane < laneCount - 1) {
-    playerLane++;
-    rightPressed = false;
-  }
-}
 
 setInterval(() => {
   if (!gameRunning) return;
@@ -185,8 +179,6 @@ function updateGame() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   drawLanes();
 
-  handleLaneChange(); // Lane-Wechsel hier!
-
   playerCar.move();
   playerCar.draw(ctx);
 
@@ -212,7 +204,7 @@ function updateGame() {
 }
 
 // WebSocket & Leaderboard
-const socket = new WebSocket("ws://193.170.158.243:3000");
+const socket = new WebSocket("ws://10.214.6.164:3000"); // Passe ggf. deine IP an!
 socket.onmessage = (event) => {
   const data = JSON.parse(event.data);
   if (data.type === "users") {
