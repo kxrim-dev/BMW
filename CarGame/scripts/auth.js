@@ -27,22 +27,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-      const res = await fetch("/api/users");
-      const users = await res.json();
+      const res = await fetch("/api/users", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password, register: false }),
+      });
 
-      if (!res.ok || typeof users !== "object") {
-        showMessage(loginMessage, "❌ Serverfehler beim Login", true);
-        return;
-      }
+      const result = await res.json();
 
-      const user = users[username];
-      if (!user) {
-        showMessage(loginMessage, "❌ Benutzer nicht gefunden", true);
-        return;
-      }
-
-      if (user.password !== password) {
-        showMessage(loginMessage, "❌ Falsches Passwort", true);
+      if (!res.ok) {
+        const msg = result.error || "❌ Login fehlgeschlagen";
+        showMessage(loginMessage, msg, true);
         return;
       }
 
@@ -51,9 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => window.location.href = "index.html", 1500);
     } catch (err) {
       console.error(err);
-      showMessage(loginMessage, "❌ Fehler beim Login", true);
+      showMessage(loginMessage, "❌ Serverfehler beim Login", true);
     }
   });
+
 
   // REGISTER
   registerForm.addEventListener("submit", async (e) => {
