@@ -2,7 +2,8 @@
   "dependencies": {
     "express": "^5.1.0",
     "jsdom": "^26.0.0",
-    "next-auth": "^4.24.11"
+    "next-auth": "^4.24.11",
+    "ws": "^8.18.2"
   },
   "name": "bmw",
   "version": "1.0.0",
