@@ -1,4 +1,3 @@
-// ==== server.js (mit WebSocket) ====
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
@@ -14,6 +13,17 @@ const DATA_FILE = path.join(__dirname, "CarGame", "data", "userData.json");
 
 app.use(express.static(__dirname));
 app.use(express.json());
+
+// Benutzerliste bereitstellen (für Login)
+app.get("/api/users", (req, res) => {
+  try {
+    const users = JSON.parse(fs.readFileSync(DATA_FILE, "utf8"));
+    res.json(users);
+  } catch (err) {
+    console.error("Fehler beim Lesen der userData.json:", err);
+    res.status(500).json({ error: "Serverfehler beim Laden der Benutzerdaten" });
+  }
+});
 
 wss.on("connection", (ws) => {
   console.log("📡 Neuer WebSocket-Client verbunden");
@@ -51,6 +61,7 @@ wss.on("connection", (ws) => {
           }
         }
 
+        // Broadcast to all clients after any score update
         wss.clients.forEach((client) => {
           if (client.readyState === WebSocket.OPEN) {
             client.send(JSON.stringify({ type: "users", users }));
