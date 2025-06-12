@@ -1,8 +1,99 @@
-const canvas = document.getElementById("gameCanvas");
-const ctx = canvas.getContext("2d");
+// === KLASSEN ===
+class Hitbox {
+  constructor(x, y, width, height) {
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+  }
+}
+
+class Car {
+  constructor(x, y, width, height, speed) {
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+    this.speed = speed;
+    this.hitbox = new Hitbox(x, y, width, height);
+  }
+  draw(ctx) {
+    if (window.carImage && window.carImage.complete) {
+      ctx.save();
+      ctx.translate(this.x + this.width / 2, this.y + this.height / 2);
+      ctx.rotate(Math.PI / 2); // 270°
+      ctx.drawImage(window.carImage, -this.height / 2, -this.width / 2, this.height, this.width);
+      ctx.restore();
+    } else {
+      ctx.fillStyle = "white";
+      ctx.fillRect(this.x, this.y, this.width, this.height);
+    }
+  }
+  move() {
+    // Smooth lane change with lerp
+    const targetX = lanes[playerLane];
+    this.x += (targetX - this.x) * 0.3; // 0.3 = schnell, 0.1 = langsam
+
+    if (Math.abs(targetX - this.x) < 1) this.x = targetX;
+
+    if (upPressed && this.y > 0) {
+      this.y -= this.speed;
+    }
+    if (downPressed && this.y < canvas.height - this.height) {
+      this.y += this.speed;
+    }
+    this.hitbox.x = this.x + this.width * 0.175;
+    this.hitbox.y = this.y + this.height * 0.05;
+    this.hitbox.width = this.width * 0.65;
+    this.hitbox.height = this.height * 0.9;
+  }
+}
+
+class EnemyCar {
+  constructor(x, y, width, height, speed) {
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+    this.speed = speed;
+    this.hitbox = new Hitbox(x, y, width, height);
+  }
+  draw(ctx) {
+    if (window.enemyImage && window.enemyImage.complete) {
+      ctx.drawImage(window.enemyImage, this.x, this.y, this.width, this.height);
+    } else {
+      ctx.fillStyle = "gray";
+      ctx.fillRect(this.x, this.y, this.width, this.height);
+    }
+  }
+  update() {
+    this.y += this.speed;
+    this.hitbox.x = this.x + this.width * 0.175;
+    this.hitbox.y = this.y + this.height * 0.05;
+    this.hitbox.width = this.width * 0.65;
+    this.hitbox.height = this.height * 0.85;
+  }
+}
+
+function checkCollision(a, b) {
+  return (
+    a.hitbox.x < b.hitbox.x + b.hitbox.width &&
+    a.hitbox.x + a.hitbox.width > b.hitbox.x &&
+    a.hitbox.y < b.hitbox.y + b.hitbox.height &&
+    a.hitbox.y + a.hitbox.height > b.hitbox.y
+  );
+}
+
+// === SPIELLOGIK ===
 
 const currentUser = localStorage.getItem("currentUser");
-if (!currentUser) window.location.href = "login.html"; // redirect if not logged in
+if (!currentUser) {
+  alert("Nicht eingeloggt – zurück zur Login-Seite");
+  window.location.href = "login.html";
+}
+
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
 
 const laneCount = 4;
 const laneWidth = canvas.width / laneCount;
@@ -11,7 +102,7 @@ const carHeight = 95;
 const lanes = [];
 
 for (let i = 0; i < laneCount; i++) {
-    lanes.push(i * laneWidth + (laneWidth - carWidth) / 2);
+  lanes.push(i * laneWidth + (laneWidth - carWidth) / 2);
 }
 
 let playerLane = 1;
@@ -30,158 +121,154 @@ let leftPressed = false;
 let upPressed = false;
 let downPressed = false;
 
+// Taste gedrückt/losgelassen merken
 document.addEventListener("keydown", (e) => {
-    if (!gameRunning) return;
-
-    if (e.code === "ArrowLeft" || e.code === "KeyA") leftPressed = true;
-    if (e.code === "ArrowRight" || e.code === "KeyD") rightPressed = true;
-    if (e.code === "ArrowUp" || e.code === "KeyW") upPressed = true;
-    if (e.code === "ArrowDown" || e.code === "KeyS") downPressed = true;
+  if (!gameRunning) return;
+  if ((e.code === "ArrowLeft" || e.code === "KeyA") && playerLane > 0) {
+    playerLane--;
+  }
+  if ((e.code === "ArrowRight" || e.code === "KeyD") && playerLane < laneCount - 1) {
+    playerLane++;
+  }
+  if (e.code === "ArrowUp" || e.code === "KeyW") upPressed = true;
+  if (e.code === "ArrowDown" || e.code === "KeyS") downPressed = true;
 });
-
 document.addEventListener("keyup", (e) => {
-    if (e.code === "ArrowLeft" || e.code === "KeyA") leftPressed = false;
-    if (e.code === "ArrowRight" || e.code === "KeyD") rightPressed = false;
-    if (e.code === "ArrowUp" || e.code === "KeyW") upPressed = false;
-    if (e.code === "ArrowDown" || e.code === "KeyS") downPressed = false;
+  if (e.code === "ArrowUp" || e.code === "KeyW") upPressed = false;
+  if (e.code === "ArrowDown" || e.code === "KeyS") downPressed = false;
 });
 
 setInterval(() => {
-    if (!gameRunning) return;
-    score++;
-    document.getElementById("score").textContent = "Score: " + score;
-    if (enemySpeed < 10) enemySpeed += 0.1;
+  if (!gameRunning) return;
+  score++;
+  document.getElementById("score").textContent = "Score: " + score;
+  if (enemySpeed < 10) enemySpeed += 0.1;
+  sendHighscore(score); // Score immer senden
 }, 500);
 
-function spawnEnemy() {
-    const laneIndex = Math.floor(Math.random() * lanes.length);
-    const x = lanes[laneIndex];
-    const enemy = new EnemyCar(x, -carHeight, carWidth, carHeight, enemySpeed);
-    enemy.hitbox.height *= 0.85;
-    enemy.hitbox.width *= 0.65;
-    enemyCars.push(enemy);
-}
+// Leaderboard regelmäßig abfragen
+setInterval(() => {
+  socket.send(JSON.stringify({ type: "getUsers" }));
+}, 1000);
 
-function checkCollision(a, b) {
-    return (
-        a.hitbox.x < b.hitbox.x + b.hitbox.width &&
-        a.hitbox.x + a.hitbox.width > b.hitbox.x &&
-        a.hitbox.y < b.hitbox.y + b.hitbox.height &&
-        a.hitbox.y + a.hitbox.height > b.hitbox.y
-    );
+function spawnEnemy() {
+  const laneIndex = Math.floor(Math.random() * lanes.length);
+  const x = lanes[laneIndex];
+  const enemy = new EnemyCar(x, -carHeight, carWidth, carHeight, enemySpeed);
+  enemy.hitbox.height *= 0.85;
+  enemy.hitbox.width *= 0.65;
+  enemyCars.push(enemy);
 }
 
 function drawLanes() {
-    ctx.strokeStyle = "white";
-    ctx.lineWidth = 2;
-    ctx.setLineDash([15, 15]);
-
-    for (let i = 1; i < lanes.length; i++) {
-        const x = (lanes[i] + lanes[i - 1]) / 2 + 20;
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
-        ctx.stroke();
-    }
-
-    ctx.setLineDash([]);
-}
-
-function gameOver() {
-    gameRunning = false;
-
-    const gameOverBox = document.createElement("div");
-    gameOverBox.id = "gameOverBox";
-    gameOverBox.innerHTML = `
-        <h2>Game Over!</h2>
-        <p>Score: ${score}</p>
-        <button id="retryBtn">Try Again</button>
-    `;
-    document.body.appendChild(gameOverBox);
-
-    document.getElementById("retryBtn").onclick = () => {
-        document.location.reload();
-        startDriving();
-    };
-
-    // Save highscore
-    fetch("/api/users", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            username: currentUser,
-            score: score
-        }),
-    }).then(showLeaderboard); // danach sofort aktualisieren
+  ctx.strokeStyle = "white";
+  ctx.lineWidth = 2;
+  ctx.setLineDash([15, 15]);
+  for (let i = 1; i < lanes.length; i++) {
+    const x = (lanes[i] + lanes[i - 1]) / 2 + 20;
+    ctx.beginPath();
+    ctx.moveTo(x, 0);
+    ctx.lineTo(x, canvas.height);
+    ctx.stroke();
+  }
+  ctx.setLineDash([]);
 }
 
 function updateGame() {
-    if (!gameRunning) return;
+  if (!gameRunning) return;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawLanes();
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawLanes();
+  playerCar.move();
+  playerCar.draw(ctx);
 
-    playerCar.move();
-    playerCar.draw(ctx);
+  enemySpawnTimer++;
+  if (enemySpawnTimer > 90) {
+    spawnEnemy();
+    enemySpawnTimer = 0;
+  }
 
-    enemySpawnTimer++;
-    if (enemySpawnTimer > 90) {
-        spawnEnemy();
-        enemySpawnTimer = 0;
+  for (let i = enemyCars.length - 1; i >= 0; i--) {
+    const enemy = enemyCars[i];
+    enemy.update();
+    enemy.draw(ctx);
+    if (checkCollision(playerCar, enemy)) {
+      gameOver();
+      window.handleCrash && window.handleCrash();
     }
-
-    for (let i = enemyCars.length - 1; i >= 0; i--) {
-        const enemy = enemyCars[i];
-        enemy.update();
-        enemy.draw(ctx);
-
-        if (checkCollision(playerCar, enemy)) {
-        handleCrash();
-        gameOver();
-        return;
+    if (enemy.y > canvas.height) {
+      enemyCars.splice(i, 1);
+    }
+  }
+  requestAnimationFrame(updateGame);
 }
 
+// WebSocket & Leaderboard
+const socket = new WebSocket("ws://10.214.6.164:3000"); // Passe ggf. deine IP an!
+socket.onmessage = (event) => {
+  const data = JSON.parse(event.data);
+  if (data.type === "users") {
+    updateLeaderboard(data.users);
+  }
+};
 
-        if (enemy.y > canvas.height) {
-            enemyCars.splice(i, 1);
-        }
-    }
-
-    requestAnimationFrame(updateGame);
+function sendHighscore(score) {
+  socket.send(JSON.stringify({
+    type: "updateScore",
+    username: currentUser,
+    score: score
+  }));
 }
 
-function showLeaderboard() {
-    fetch("/api/users")
-        .then((res) => res.json())
-        .then((users) => {
-            const leaderboard = Object.entries(users)
-                .map(([name, data]) => ({ name, score: data.highscore ?? 0 }))
-                .sort((a, b) => b.score - a.score);
+function updateLeaderboard(users) {
+  const leaderboard = Object.entries(users)
+    .map(([name, data]) => ({ name, score: data.highscore ?? 0 }))
+    .sort((a, b) => b.score - a.score);
 
-            const leaderboardDiv = document.getElementById("leaderboard");
-            leaderboardDiv.innerHTML = "";
+  const leaderboardDiv = document.getElementById("leaderboard");
+  leaderboardDiv.innerHTML = "";
+  leaderboard.forEach((entry, index) => {
+    const row = document.createElement("div");
+    row.className = "leaderboard-row" + (entry.name === currentUser ? " current-user" : "");
+    row.innerHTML = `<span>${index + 1}. ${entry.name}</span> <span>${entry.score}</span>`;
+    leaderboardDiv.appendChild(row);
+  });
+}
 
-            leaderboard.forEach((entry, index) => {
-                const row = document.createElement("div");
-                row.textContent = `#${index + 1} – ${entry.name}: ${entry.score}`;
+function gameOver() {
+  gameRunning = false;
+  const gameOverBox = document.createElement("div");
+  gameOverBox.id = "gameOverBox";
+  gameOverBox.innerHTML = `
+      <h2>Game Over!</h2>
+      <p>Score: ${score}</p>
+      <button id="retryBtn">Try Again</button>
+  `;
+  document.body.appendChild(gameOverBox);
+  document.getElementById("retryBtn").onclick = () => {
+    document.body.removeChild(gameOverBox);
+    resetGame();
+  };
+  sendHighscore(score);
+}
 
-                if (entry.name === currentUser) {
-                    row.style.color = "gold";
-                    row.style.fontWeight = "bold";
-                }
-
-                leaderboardDiv.appendChild(row);
-            });
-        })
-        .catch((err) => {
-            console.error("Fehler beim Laden der Bestenliste:", err);
-        });
+function resetGame() {
+  score = 0;
+  enemyCars.length = 0;
+  enemySpeed = 2;
+  playerLane = 1;
+  playerCar.x = lanes[playerLane];
+  playerCar.y = 300;
+  gameRunning = true;
+  document.getElementById("score").textContent = "Score: 0";
+  updateGame();
+  if (window.startDriving) window.startDriving();
 }
 
 function logout() {
-    localStorage.removeItem("currentUser");
-    window.location.href = "login.html";
+  localStorage.removeItem("currentUser");
+  window.location.href = "login.html";
 }
 
+// Start the game loop
 updateGame();
-showLeaderboard();

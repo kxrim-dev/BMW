@@ -1,2 +1,5 @@
 ./node_modules 
 ./CarGame/data/index.json
+node_modules
+CarGame/data/index.json
+
