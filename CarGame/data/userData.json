@@ -7,10 +7,10 @@
 {
   "test": {
     "password": "test",
-    "highscore": 26
+    "highscore": 27
   },
   "test2": {
     "password": "test",
-    "highscore": 0
+    "highscore": 3
   }
 }

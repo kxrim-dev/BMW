@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+//this was the problem
 const { JSDOM } = require("jsdom");
 
 const directories = ["bmw-car", "infos-bmw", "about-us"];
