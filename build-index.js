@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
-const { JSDOM } = require("jsdom
+//this was the problem
+const { JSDOM } = require("jsdom");
 
 const directories = ["bmw-car", "infos-bmw", "about-us"];
 const output = [];
